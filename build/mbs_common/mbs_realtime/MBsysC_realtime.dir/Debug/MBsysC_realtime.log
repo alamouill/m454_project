@@ -1,0 +1,167 @@
+﻿  Building Custom Rule C:/Users/csbau/mobile_robots/m454_project/mbsysCopy/mbs_common/mbs_realtime/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_realtime\CMakeFiles\generate.stamp is up-to-date.
+  realtime.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\realtime\realtime.c(461): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\realtime\realtime.c(615): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\realtime\realtime.c(842): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  realtime_ext.c
+  realtime_functions.c
+  time_functions.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\realtime\time_functions.c(31): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\realtime\time_functions.c(40): warning C4244: '=': conversion from '__time64_t' to 'long', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\realtime\time_functions.c(39): warning C4996: '_ftime64': This function or variable may be unsafe. Consider using _ftime64_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\sys/timeb.h(76): note: see declaration of '_ftime64'
+  void_set_plot.c
+  auto_plot.c
+  set_plot.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\auto_plot\set_plot.c(16): warning C4273: 'init_set_plot': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_realtime\sdl\auto_plot\set_plot.h(15): note: see previous definition of 'init_set_plot'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\auto_plot\set_plot.c(27): warning C4273: 'free_set_plot': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_realtime\sdl\auto_plot\set_plot.h(16): note: see previous definition of 'free_set_plot'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\auto_plot\set_plot.c(40): warning C4273: 'set_plot': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\user_realtime.h(38): note: see previous definition of 'set_plot'
+  events_sdl.c
+  plot_sdl.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(56): warning C4101: 'current': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1764): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1770): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1774): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1786): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1790): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1795): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1806): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1810): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1815): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1840): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1851): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1855): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1875): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(1879): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2043): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2553): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2318): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2321): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2325): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2328): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2331): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2334): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2338): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2341): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2345): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2348): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2352): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2355): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2358): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2361): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2364): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2367): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2370): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2376): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2378): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2381): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2383): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2386): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2389): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2395): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2397): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2400): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2402): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2405): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2408): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2415): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2418): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2424): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2427): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2430): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2433): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2436): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2439): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2447): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2459): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2469): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2479): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2489): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2608): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2612): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2633): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2656): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2661): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2666): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2671): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2749): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\sdl\plot_sdl.c(2858): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  java_functions.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\java\java_functions.c(119): warning C4101: 'model': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\java\java_functions.c(121): warning C4101: 'doubleArrayArg': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\java\java_functions.c(120): warning C4101: 'mbsFilename': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\java\java_functions.c(119): warning C4101: 'model3D': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\java\java_functions.c(115): warning C4101: 'MbsModelJ3DClass': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\java\java_functions.c(115): warning C4101: 'PadModelClass': unreferenced local variable
+  visu_past.c
+  Generating Code...
+  MBsysC_realtime.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_realtime\Debug\MBsysC_realtime.lib

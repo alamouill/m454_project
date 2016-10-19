@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/Users/csbau/mobile_robots/m454_project/mbsysCopy/mbs_common/mbs_struct/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_struct\CMakeFiles\generate.stamp is up-to-date.
+  mbs_aux.c
+  mbs_data.c
+  mbs_project_fct_ptr.c
+  mbs_sensor.c
+  Generating Code...
+  MBsysC_struct.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_struct\Debug\MBsysC_struct.lib

@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_plot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_Derivative.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_DrivenJoints.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_ExtForces.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_IO.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_JointForces.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_Link3DForces.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_LinkForces.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_cons_hJ.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_cons_jdqd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_dirdyn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\user_model.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_events.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_options.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_visu.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\config\config_file.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\Controller.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr10Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr11Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr12Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr13Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr14Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr15Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr16Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr17Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr18Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr19Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr1Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr20Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr2Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr3Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr4Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr5Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr6Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr7Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr8Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\ctrl_interface\specific\Gr9Ctrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr1\CtrlStruct_gr1.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr1\ctrl_main_gr1.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr10\CtrlStruct_gr10.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr10\ctrl_main_gr10.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr11\CtrlStruct_gr11.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr11\ctrl_main_gr11.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr12\CtrlStruct_gr12.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr12\ctrl_main_gr12.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr13\CtrlStruct_gr13.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr13\ctrl_main_gr13.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr14\CtrlStruct_gr14.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr14\ctrl_main_gr14.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr15\CtrlStruct_gr15.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr15\ctrl_main_gr15.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr16\CtrlStruct_gr16.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr16\ctrl_main_gr16.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr17\CtrlStruct_gr17.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr17\ctrl_main_gr17.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr18\CtrlStruct_gr18.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr18\ctrl_main_gr18.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr19\CtrlStruct_gr19.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr19\ctrl_main_gr19.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr2\CtrlStruct_gr2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr2\ctrl_main_gr2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr20\CtrlStruct_gr20.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr20\ctrl_main_gr20.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr3\CtrlStruct_gr3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr3\ctrl_main_gr3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr4\CtrlStruct_gr4.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr4\ctrl_main_gr4.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr5\CtrlStruct_gr5.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr5\ctrl_main_gr5.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr6\CtrlStruct_gr6.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr6\ctrl_main_gr6.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\localization\calibration_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\localization\init_pos_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\localization\kalman_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\localization\mcl_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\localization\odometry_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\localization\opp_pos_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\localization\triangulation_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\main\CtrlStruct_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\main\ctrl_main_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\path\path_planning_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\regulation\path_regulation_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\regulation\speed_regulation_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\strategy\strategy_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr7\useful\useful_gr7.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr8\CtrlStruct_gr8.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr8\ctrl_main_gr8.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr9\CtrlStruct_gr9.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\groups_ctrl\gr9\ctrl_main_gr9.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\no_ctrl\NoCtrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\player_ctrl\JoystickCtrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\player_ctrl\KeyboardCtrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\player_ctrl\PlayerCtrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\ctrl\resting_ctrl\RestingCtrl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\actuators\Actuator.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\actuators\ActuatorGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\actuators\ActuatorRobot.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\cpp_interface\CppInterface.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\cpp_interface\cpp_interface_gestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\Basis.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\Elements.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\FixedObject.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\MovingObject.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\NoContactElements.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\PhysicElements.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\Robot.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\Target.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\elements\robot_init_pos.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\force_pos\Orientation.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\force_pos\Pose.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\force_pos\Segment.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\force_pos\Vector.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\force_pos\Vector2D.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\force_pos\Vector3D.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\BasicShape.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\CircleCutShape.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\CircleShape.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\GeometryShape.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\MiniBotShape.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\RectangleShape.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\UnionShape.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\WallShape.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\contact_computation.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\ContactGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\Gestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\GlobalGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\PositionGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\RobotGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\ScoreGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\TargetGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\TimeGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\gestion\VisuGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListBases.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListElements.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListPhysicConfig.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListPhysicElements.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListPhysicHard.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListPhysicInput.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListTargets.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\rolling\RollingGestion.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\rolling\RollingRobot.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\sensors\RobotSensors.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\sensors\Sensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\sensors\specific_sensor\ColorSensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\sensors\specific_sensor\TargetSensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\sensors\specific_sensor\TimeSensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\sensors\specific_sensor\TowerSensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\sensors\specific_sensor\USwitchSensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\sensors\specific_sensor\WheelsSensor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\useful\Noise.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\useful\config_functions.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\useful\simu_functions.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\csbau\mobile_robots\m454_project\userfctR\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D5E65697-5E03-3CBB-987F-E15D0A264751}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

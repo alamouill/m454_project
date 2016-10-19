@@ -1,0 +1,71 @@
+﻿  Building Custom Rule C:/Users/csbau/mobile_robots/m454_project/userfctR/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\csbau\mobile_robots\m454_project\build\userfctR\CMakeFiles\generate.stamp is up-to-date.
+  user_realtime_plot.c
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\math.h(1010): warning C4005: 'M_PI': macro redefinition
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\win64_include_lib\include\sdl\SDL_stdinc.h(339): note: see previous definition of 'M_PI'
+C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_plot.c(30): warning C4273: 'user_realtime_plot': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\user_realtime.h(21): note: see previous definition of 'user_realtime_plot'
+  user_Derivative.c
+  user_DrivenJoints.c
+  user_ExtForces.c
+C:\Users\csbau\mobile_robots\m454_project\userfctR\user_ExtForces.c(25): warning C4273: 'user_ExtForces': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_struct\mbs_project_interface.h(34): note: see previous definition of 'user_ExtForces'
+  user_IO.c
+C:\Users\csbau\mobile_robots\m454_project\userfctR\user_IO.c(25): warning C4273: 'mbs_new_user_IO': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_struct\mbs_user_interface.h(63): note: see previous definition of 'mbs_new_user_IO'
+C:\Users\csbau\mobile_robots\m454_project\userfctR\user_IO.c(36): warning C4273: 'mbs_delete_user_IO': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_struct\mbs_user_interface.h(68): note: see previous definition of 'mbs_delete_user_IO'
+  user_JointForces.c
+  user_Link3DForces.c
+  user_LinkForces.c
+  user_cons_hJ.c
+  user_cons_jdqd.c
+  user_dirdyn.c
+  user_model.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_load_xml.h(24): warning C4273: 'mbs_delete_data': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_load_xml.h(21): note: see previous definition of 'mbs_delete_data'
+C:\Users\csbau\mobile_robots\m454_project\userfctR\user_model.c(24): warning C4273: 'mbs_new_user_model': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_struct\mbs_user_interface.h(28): note: see previous definition of 'mbs_new_user_model'
+C:\Users\csbau\mobile_robots\m454_project\userfctR\user_model.c(35): warning C4273: 'mbs_delete_user_model': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_struct\mbs_user_interface.h(29): note: see previous definition of 'mbs_delete_user_model'
+C:\Users\csbau\mobile_robots\m454_project\userfctR\user_model.c(41): warning C4273: 'mbs_load_user_model_xml': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_load_xml.h(32): note: see previous definition of 'mbs_load_user_model_xml'
+  Generating Code...
+  user_realtime_events.cc
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\math.h(1010): warning C4005: 'M_PI': macro redefinition
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\win64_include_lib\include\sdl\SDL_stdinc.h(339): note: see previous definition of 'M_PI'
+C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\UnionShape.hh(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListPhysicElements.hh(46): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListPhysicElements.hh(47): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListPhysicElements.hh(48): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListPhysicElements.hh(49): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListTargets.hh(21): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_events.cc(59): warning C4273: 'user_keyboard': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\user_realtime.h(22): note: see previous definition of 'user_keyboard'
+C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_events.cc(171): warning C4273: 'user_joystick_axes': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\user_realtime.h(23): note: see previous definition of 'user_joystick_axes'
+C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_events.cc(215): warning C4273: 'user_joystick_buttons': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\user_realtime.h(24): note: see previous definition of 'user_joystick_buttons'
+  user_realtime_options.cc
+C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_options.cc(86): warning C4273: 'user_realtime_options': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_realtime\realtime\realtime.h(181): note: see previous definition of 'user_realtime_options'
+  user_realtime_visu.cc
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\math.h(1010): warning C4005: 'M_PI': macro redefinition
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\win64_include_lib\include\sdl\SDL_stdinc.h(339): note: see previous definition of 'M_PI'
+C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\UnionShape.hh(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListPhysicElements.hh(46): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListPhysicElements.hh(47): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListPhysicElements.hh(48): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListPhysicElements.hh(49): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListTargets.hh(21): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\userfctR\realtime\user_realtime_visu.cc(45): warning C4273: 'user_realtime_visu': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_realtime\user_realtime_visu.h(18): note: see previous definition of 'user_realtime_visu'
+  config_file.cc
+  Controller.cc
+C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\geometry\UnionShape.hh(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListPhysicElements.hh(46): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListPhysicElements.hh(47): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListPhysicElements.hh(48): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\userFiles\simu\lists\ListPhysicElements.hh(49): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\csbau\mobile_robots\m454_project\userfiles\simu\lists\ListTargets.hh(21): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Gr10Ctrl.cc

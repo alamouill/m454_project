@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\auto_output\auto_output.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\auto_output\set_output.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_matrix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_path.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_tool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\norm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\useful_functions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\write_files.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D5E65697-5E03-3CBB-987F-E15D0A264751}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

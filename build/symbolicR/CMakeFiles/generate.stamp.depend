@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Users/csbau/mobile_robots/m454_project/symbolicR/CMakeLists.txt
+C:/Program Files/CMake/share/cmake-3.6/Modules/GenerateExportHeader.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/Program Files/CMake/share/cmake-3.6/Modules/exportheader.cmake.in

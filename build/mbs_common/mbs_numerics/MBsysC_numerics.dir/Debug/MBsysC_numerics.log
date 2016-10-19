@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Users/csbau/mobile_robots/m454_project/mbsysCopy/mbs_common/mbs_numerics/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_numerics\CMakeFiles\generate.stamp is up-to-date.
+  choldc.c
+  cholsl.c
+  dopri5.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_numerics\dopri5.c(677): warning C4101: 'j': unreferenced local variable
+  eig.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_numerics\eig.c(39): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  eulerexplicit.c
+  lubksb.c
+  ludcmp.c
+  nrutil.c
+  rank.c
+  rk4.c
+  svbksb.c
+  svdcmp.c
+  thetaSC.c
+  Generating Code...
+  MBsysC_numerics.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_numerics\Debug\MBsysC_numerics.lib

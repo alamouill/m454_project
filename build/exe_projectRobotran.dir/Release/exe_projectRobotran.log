@@ -1,0 +1,22 @@
+﻿     Creating library C:/Users/csbau/mobile_robots/m454_project/build/Release/exe_projectRobotran.lib and object C:/Users/csbau/mobile_robots/m454_project/build/Release/exe_projectRobotran.exp
+main.obj : warning LNK4217: locally defined symbol mbs_load imported in function main
+MBsysC_loadXML.lib(mbs_load_xml.obj) : warning LNK4217: locally defined symbol get_ivec_1 imported in function MDS_translate_q
+MBsysC_loadXML.lib(mbs_load_xml.obj) : warning LNK4217: locally defined symbol free_ivec_1 imported in function mbs_delete_data
+MBsysC_loadXML.lib(mbs_load_xml.obj) : warning LNK4217: locally defined symbol get_dvec_1 imported in function MDS_create_MBSdataStruct
+MBsysC_loadXML.lib(mbs_load_xml.obj) : warning LNK4217: locally defined symbol free_dvec_1 imported in function mbs_delete_data
+MBsysC_loadXML.lib(mbs_load_xml.obj) : warning LNK4217: locally defined symbol copy_dvec_0 imported in function MDS_create_MBSdataStruct
+MBsysC_loadXML.lib(mbs_load_xml.obj) : warning LNK4217: locally defined symbol copy_dvec_1 imported in function MDS_create_MBSdataStruct
+MBsysC_loadXML.lib(mbs_xml_reader.obj) : warning LNK4217: locally defined symbol get_ivec_0 imported in function MDS_ball_reader
+MBsysC_loadXML.lib(mbs_xml_reader.obj) : warning LNK4217: locally defined symbol free_ivec_0 imported in function free_MDS_ball_strct
+MBsysC_loadXML.lib(mbs_xml_reader.obj) : warning LNK4217: locally defined symbol get_dvec_0 imported in function MDS_base_reader
+MBsysC_numerics.lib(ludcmp.obj) : warning LNK4049: locally defined symbol get_dvec_0 imported
+MBsysC_loadXML.lib(mbs_xml_reader.obj) : warning LNK4217: locally defined symbol free_dvec_0 imported in function free_MDS_base_strct
+MBsysC_numerics.lib(ludcmp.obj) : warning LNK4049: locally defined symbol free_dvec_0 imported
+MBsysC_realtime.lib(realtime.obj) : warning LNK4217: locally defined symbol pow_int imported in function get_simu_speed_factor
+MBsysC_realtime.lib(plot_sdl.obj) : warning LNK4049: locally defined symbol pow_int imported
+MBsysC_realtime.lib(plot_sdl.obj) : warning LNK4217: locally defined symbol expo_ten_inf imported in function str_label
+MBsysC_realtime.lib(auto_plot.obj) : warning LNK4217: locally defined symbol get_char_tab imported in function init_auto_plot
+MBsysC_realtime.lib(auto_plot.obj) : warning LNK4217: locally defined symbol free_char_tab imported in function free_auto_plot
+Project_userfct.lib(user_dirdyn.obj) : warning LNK4217: locally defined symbol set_plot imported in function user_dirdyn_loop
+Project_userfct.lib(opp_pos_gr7.obj) : warning LNK4049: locally defined symbol set_plot imported
+  exe_projectRobotran.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\Release\exe_projectRobotran.exe

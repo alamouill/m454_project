@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_load_xml.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D5E65697-5E03-3CBB-987F-E15D0A264751}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

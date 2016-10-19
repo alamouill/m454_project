@@ -1,0 +1,68 @@
+﻿  Building Custom Rule C:/Users/csbau/mobile_robots/m454_project/mbsysCopy/mbs_common/mbs_utilities/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_utilities\CMakeFiles\generate.stamp is up-to-date.
+  auto_output.c
+  set_output.c
+  lut.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(303): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(310): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(320): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1192): note: see declaration of 'fscanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(326): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1192): note: see declaration of 'fscanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(297): warning C4101: 'i': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(344): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(351): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(362): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1192): note: see declaration of 'fscanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(368): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1192): note: see declaration of 'fscanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\lut.c(371): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1192): note: see declaration of 'fscanf'
+  mbs_buffer.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(35): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(38): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(80): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(85): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(236): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(241): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(242): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(308): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(350): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(491): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_buffer.c(492): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+  mbs_matrix.c
+  mbs_path.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_path.c(26): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\mbs_path.c(46): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  mbs_set.c
+  mbs_tool.c
+  norm.c
+  useful_functions.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\useful_functions.c(19): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\useful_functions.c(158): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\time.h(475): note: see declaration of 'ctime'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\useful_functions.c(868): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_utilities\useful_functions.c(893): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+  write_files.c
+  Generating Code...
+  MBsysC_utilities.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_utilities\Debug\MBsysC_utilities.lib
