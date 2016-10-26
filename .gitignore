@@ -49,11 +49,7 @@ Temporary Items
 
 
 #manuel
-/animationR
-/build
-/dataR
-/doc
-/mbsysCopy
-/resultsR
-/symbiolicR
-/workR
+/*
+!/userFiles
+/userFiles/*
+!/userFiles/ctrl
