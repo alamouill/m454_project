@@ -4,6 +4,9 @@
  * \brief Initialization, loop and finilization of the controller written in C (but compiled as C++)
  */
 
+
+//blabla testzone blabla
+
 #include "ctrl_main_gr7.h"
 #include "namespace_ctrl.h"
 #include "init_pos_gr7.h"
