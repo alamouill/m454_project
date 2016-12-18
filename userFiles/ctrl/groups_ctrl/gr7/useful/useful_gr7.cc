@@ -1,8 +1,11 @@
-/*! 
- * \author Group 7
- * \file useful_gr7.cc
- * \brief useful functions to use in the controller
- */
+/* Mobile Robots Project - useful_gr7.cc
+ * regulation to follow a given path
+ * Version 1.1
+ * Last Update: 8/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
+
 
 #include "useful_gr7.h"
 #include <math.h>
