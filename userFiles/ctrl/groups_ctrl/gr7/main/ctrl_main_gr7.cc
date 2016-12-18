@@ -1,8 +1,9 @@
-/*! 
- * \author Group 7
- * \file controller_main_gr7.cc
- * \brief Initialization, loop and finilization of the controller written in C (but compiled as C++)
- */
+/* Mobile Robots Project - controller_main_gr7.cc
+ * brief Initialization, loop and finilization of the controller written in C (but compiled as C++)
+ * Version 1.2
+ * Last Update: 11/121/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #include "ctrl_main_gr7.h"
 #include "namespace_ctrl.h"
