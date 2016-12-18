@@ -1,7 +1,7 @@
 /*! 
  * \author Group 7
  * \file calibration_gr7.h
- * \brief calibration of the robot
+ * \brief calibration of the robot's position x, y, theta
  */
 
 #ifndef _CALIBRATION_GR7_H_
