@@ -1,3 +1,9 @@
+/*! 
+ * \author Group 7
+ * \file useful_gr7.cc
+ * \brief useful functions to use in the controller
+ */
+
 #include "useful_gr7.h"
 #include <math.h>
 #include <stdlib.h>

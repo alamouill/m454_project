@@ -1,3 +1,10 @@
+/* Mobile Robots Project - opp_pos_gr7.cc
+ * Estimate Opponnents Robot Position Using the beacon tower
+ * Version 1.7
+ * Last Update: 8/11/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
 #include "opp_pos_gr7.h"
 #include "init_pos_gr7.h"
 #include "useful_gr7.h"
