@@ -1,3 +1,8 @@
+/* Mobile Robots Project - odometry_gr7.cc
+ * Version 2.1
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #include <stdio.h>
 #include "odometry_gr7.h"
