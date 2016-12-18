@@ -178,7 +178,7 @@ void main_strategy(CtrlStruct *cvs)
 
 	evaluate_Oponent(cvs);
 //	determine_goal(cvs);
-
+	//std::cout << "gamestate: " << cvs->strat->main_state << "\n";
 	switch (cvs->strat->main_state)
 	{
 	case GAME_STATE_START:
@@ -208,7 +208,8 @@ void main_strategy(CtrlStruct *cvs)
 //		std::cout << "goal: " << momentaryGoal.first << " pos " << pos.first << "\n";
 //		std::cout << "2goal: " << momentaryGoal.second << " 2pos " << pos.second << "\n";
 //		std::cout << "distance: " << get_Distance(momentaryGoal, pos) << "\n";
-		if (get_Distance(momentaryGoal, pos) < 40) {
+		
+		if (get_Distance(momentaryGoal, pos) < 30) {
 			std::cout << "_ strat arrived at target\n";
 			set_goal(cvs->path, pos, noGoal);
 			cvs->strat->main_state = GAME_STATE_Capture;					// wait 3sec
@@ -224,7 +225,7 @@ void main_strategy(CtrlStruct *cvs)
 
 	case GAME_STATE_Capture:
 		if (1){//cvs->inputs->target_detected) {
-			std::cout << "capturing start\n";
+			std::cout << "capturing " << (cvs->inputs->t - timer) << " " << (cvs->inputs->nb_targets -captured) << "\n";
 			if ((cvs->inputs->t - timer)>4 || cvs->inputs->nb_targets > captured) {		//cvs->strat->avilability[cvs->strat->index_goal] = 0;												//todo change to exact secs
 				std::cout << "captured\n";
 				cvs->strat->avilability[cvs->strat->index_goal] = 0;
@@ -244,9 +245,8 @@ void main_strategy(CtrlStruct *cvs)
 		//	cvs->strat->avilability[cvs->strat->index_goal] = 0;
 			//todo: what if target is gone?
 		}
-		speed_regulation(cvs, 0.0, 0.0);
 		//path_planning(cvs);
-		//follow_path(cvs, cvs->path->theta, cvs->path->linspeed, cvs->rob_pos->theta);
+		speed_regulation(cvs, 0, 0);
 
 		break;
 
@@ -258,10 +258,13 @@ void main_strategy(CtrlStruct *cvs)
 		cvs->strat->index_goal = determine_goal(cvs);	
 		printf("OOOO %d \n", cvs->strat->index_goal);
 		ngoal = std::pair<int, int>(cvs->strat->coord_goal[cvs->strat->index_goal][0],
-			cvs->strat->coord_goal[cvs->strat->index_goal][1]);
+		cvs->strat->coord_goal[cvs->strat->index_goal][1]);
+		cvs->strat->main_state = GAME_STATE_DRIVE;
 		}
 		else {
 			//strat->index_goal = 8;                   /////////////////////////////7
+			std::cout << "setting base as target\n";
+			cvs->strat->main_state = GAME_STATE_DRIVE_HOME;
 			ngoal = get_node_pos(BASE_NODE_NB);
 		}
 
@@ -270,20 +273,33 @@ void main_strategy(CtrlStruct *cvs)
 		set_goal(cvs->path, pos, ngoal);
 
 		
-		cvs->strat->main_state = GAME_STATE_DRIVE;
 		std::cout << "new goal set: " << cvs->path->nextGoal[0] << " " << cvs->path->nextGoal[1] << "availability: " << cvs->strat->avilability[cvs->strat->index_goal] << "\n";
 		break;
 
-	case GAME_STATE_E:
-		speed_regulation(cvs, 0.0, 0.0);
+	case GAME_STATE_DRIVE_HOME:
+
+		if (get_Distance(get_node_pos(BASE_NODE_NB), pos) < 30) {
+			std::cout << "_ strat arrived home\n";
+			set_goal(cvs->path, pos, noGoal);
+			if (!cvs->outputs->flag_release)
+				cvs->outputs->flag_release = 1;
+			else{
+				captured = 0;
+				cvs->outputs->flag_release = 0;
+				cvs->strat->main_state = GAME_STATE_SET_NEW_GOAL;
+			}
+			timer = cvs->inputs->t;
+			break;
+		}
+		update_path_planning(cvs);
+		path_planning(cvs);
+		follow_path(cvs, cvs->path->theta, cvs->path->linspeed, cvs->rob_pos->theta);
 		break;
 
 	default:
 		printf("Error: unknown strategy main state: %d !\n", cvs->strat->main_state);
 		exit(EXIT_FAILURE);
 	}
-
-
 }
 
 NAMESPACE_CLOSE();

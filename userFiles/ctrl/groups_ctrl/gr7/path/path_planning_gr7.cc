@@ -8,13 +8,13 @@
 
 NAMESPACE_INIT(ctrlGr7);
 
-#define KPOT    7.77      /// 8
+#define KPOT    8.5     /// 8
 #define KOPP    0.45   /// 0.45
-#define K_FROTT    0.05    /// 0
-#define K_VITESSE  7.77   /// 9
-#define K_GOAL     7.77   /// 6.5
+#define K_FROTT    0.03    /// 0
+#define K_VITESSE  7   /// 9
+#define K_GOAL     6.5   /// 6.5
 #define M_TO_MM    1000
-#define DSTARGOAL  80
+#define DSTARGOAL  130
 #define D_OPP    0.45
 #define NO_GOAL    3666
 
@@ -621,17 +621,17 @@ void path_planning(CtrlStruct *cvs)
 	// Compute the speed in X and Y
 	//printf("%f \n", norm_dist(path->nextGoal[0] - rob_pos->x*M_TO_MM, path->nextGoal[1] - rob_pos->y*M_TO_MM));
 //	printf("%d \n", cvs->inputs->target_detected);
-	/*if (norm_dist(path->nextGoal[0] - rob_pos->x*M_TO_MM, path->nextGoal[1] - rob_pos->y*M_TO_MM) > DSTARGOAL)
-	{*/
+	if (norm_dist(path->nextGoal[0] - rob_pos->x*M_TO_MM, path->nextGoal[1] - rob_pos->y*M_TO_MM) > DSTARGOAL)
+	{
 		path->speed[0] = K_FROTT*last_speed_x + KPOT*(force_map[indice_x][indice_y][0]) + force2Goal_x - force2Opp_x;
 		path->speed[1] = K_FROTT*last_speed_y + KPOT*(force_map[indice_x][indice_y][1]) + force2Goal_y - force2Opp_y;
-	//}
-	/*else
+	}
+	else
 	{
 		//printf("coucou\n");
 		path->speed[0] = K_FROTT*last_speed_x + force2Goal_x - force2Opp_x;
 		path->speed[1] = K_FROTT*last_speed_y + force2Goal_y - force2Opp_y;
-	}*/
+	}
 	// Convert the speed X,Y -> Pho, Theta
 	path->linspeed = K_VITESSE*sqrt(path->speed[0] * path->speed[0] + path->speed[1] * path->speed[1]);
 	path->theta = atan2(path->speed[1], path->speed[0]);
@@ -653,7 +653,7 @@ void update_path_planning(CtrlStruct *cvs)
 //	std::cout << ("update_path_planning\t") << cvs->path->nextGoal[0] << "\t rob pos" <<rob_pos[0] << "\n";
 	// Definitions
 	//printf("%f \n", get_Distance(cvs->path->nextGoal, rob_pos));
-	if (get_Distance(cvs->path->nextGoal, rob_pos) < 200) {
+	if (get_Distance(cvs->path->nextGoal, rob_pos) < 150) {
 //		printf("go to next node\n");
 		cvs->path->positionOnPath++;
 //		std::cout << ("go to next node1\t") << cvs->path->positionOnPath << " " << m_paths[cvs->path->startID][cvs->path->goalID].size() << "\n";

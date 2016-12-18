@@ -6,9 +6,9 @@
 
 #define R_ROUE 0.03
 #define ECART_ROUE 0.225
-#define QDIAG 0.007
-#define QTHETA 0.007
-#define RCOEFF 0.015
+#define QDIAG 0.17
+#define QTHETA 0.001
+#define RCOEFF 0.3
 
 NAMESPACE_INIT(ctrlGr7);
 
@@ -18,6 +18,8 @@ void inverse_matrix_33(double m[3][3], double minv[3][3])
 		m[0][1] * (m[1][0] * m[2][2] - m[1][2] * m[2][0]) +
 		m[0][2] * (m[1][0] * m[2][1] - m[1][1] * m[2][0]);
 	double invdet = 1 / det;
+
+	//printf("Determinant: %f, inverse det: %f", det, invdet);
 
 	minv[0][0] = (m[1][1] * m[2][2] - m[2][1] * m[1][2]) * invdet;
 	minv[0][1] = (m[0][2] * m[2][1] - m[0][1] * m[2][2]) * invdet;
@@ -42,6 +44,7 @@ void mult_matrices(double a[3][3], double b[3][3], double result[3][3])
 			{
 				result[i][j] += a[i][k] * b[k][j];
 			}
+
 		}
 	}
 }
@@ -93,24 +96,25 @@ void kalman(double new_position[3], double odometry_position[3], double tria_pos
 	int i = 0, j = 0;
 	/*------------------------ Déclaration des matrices ---------------------*/
 	static int init = false; 
-	static double prev_position[3];
-	double future_position[3];
+	static double prev_position[3] = { 0,0,0 };
+	double future_position[3] = { 0,0,0 };
 	double F[3][3] = { { 1,0,0 },{ 0,1,0 },{ 0,0,1 } };
 	float coefB = R_ROUE / 2 * dt;
 	double B[3][2] = { { coefB*cos(odometry_position[2]),coefB*cos(odometry_position[2]) },
 	{ coefB*sin(odometry_position[2]),coefB*sin(odometry_position[2]) },
 	{ coefB * 1 / ECART_ROUE,-coefB * 1 / ECART_ROUE } };
 
-	static double prev_P[3][3] = { {0,0,0},{ 0,0,0 },{ 0,0,0 } };
-	double new_P[3][3];
-	double future_P[3][3];
-	double Q[3][3] = { { QDIAG,0,QTHETA },{ 0,QDIAG,QTHETA },{ QTHETA,QTHETA,QDIAG } };    ////////// COEF A DETERMINER!!
-	double innovation[3];
-	double R[3][3] = { { RCOEFF,0,0 },{ 0,RCOEFF,0 },{ 0,0,RCOEFF } };    ////////// COEF A DETERMINER!!
-	double S[3][3];
-	double inv_S[3][3];
-	double K[3][3];
+	static double prev_P[3][3] = { {1,0,0},{ 0,1,0 },{ 0,0,1 } };
 
+	double new_P[3][3] = { { 0,0,0 },{ 0,0,0 },{ 0,0,0 } };
+	double future_P[3][3] = { { 0,0,0 },{ 0,0,0 },{ 0,0,0 } };
+	double Q[3][3] = { { QDIAG,0,QTHETA },{ 0,QDIAG,QTHETA },{ QTHETA,QTHETA,QDIAG } };    ////////// COEF A DETERMINER!!
+	double innovation[3] = { 0,0,0 };
+	double R[3][3] = { { RCOEFF,0,0 },{ 0,RCOEFF,0 },{ 0,0,RCOEFF } };    ////////// COEF A DETERMINER!!
+	double S[3][3] = { { 0,0,0 },{ 0,0,0 },{ 0,0,0 } };
+	double inv_S[3][3] = { { 0,0,0 },{ 0,0,0 },{ 0,0,0 } };
+	double K[3][3] = { { 0,0,0 },{ 0,0,0 },{ 0,0,0 } };
+	double KHP[3][3] = { { 0,0,0 },{ 0,0,0 },{ 0,0,0 } };
 
 	/*-------------------------Firts Step: predict --------------------------*/
 
@@ -139,7 +143,7 @@ void kalman(double new_position[3], double odometry_position[3], double tria_pos
 //	prev_position[2] = new_position[2];
 	
 	//new_P= F*prev_P*F^T+Q
-
+	
 	sum_matrices(prev_P, Q, new_P);
 
 	/*-------------------------- Second Step: Update ------------------------*/
@@ -153,19 +157,19 @@ void kalman(double new_position[3], double odometry_position[3], double tria_pos
 
 
 
-//	set_plot(tria_position[0], "tria X");
+	set_plot(tria_position[0], "tria X");
 //	set_plot(tria_position[1], "tria Y");
 //	set_plot(tria_position[2], "tria T");
 	
 
-//	set_plot(odometry_position[0], "o X");
+	set_plot(odometry_position[0], "o X");
 //	set_plot(odometry_position[1], "o Y");
 //	set_plot(odometry_position[2], "o T");
 
 	// S=H*new_P*H^T+R
 
 	sum_matrices(new_P, R, S);
-
+	
 	//K=new_P*H^T*S^-1
 
 	inverse_matrix_33(S, inv_S);
@@ -177,23 +181,24 @@ void kalman(double new_position[3], double odometry_position[3], double tria_pos
 	future_position[1] = new_position[1] + K[1][0] * innovation[0] + K[1][1] * innovation[1] + K[1][2] * innovation[2];
 	future_position[2] = new_position[2] + K[2][0] * innovation[0] + K[2][1] * innovation[1] + K[2][2] * innovation[2];
 
-
+	
 	// future_P= (I-K*H)P
 
-	double KHP[3][3];
 	mult_matrices(K, new_P, KHP);
 	substract_matrices(new_P, KHP, future_P);
 
 	/*************************************** Update new position *********************************/
-	//new_position[0]= first_order_filter(prev_position[0], future_position[0], 0.1, dt);
-//	new_position[1]= first_order_filter(prev_position[1], future_position[1], 0.1, dt);
-//	new_position[2]= first_order_filter(prev_position[2], future_position[2], 0.1, dt);
-	new_position[0] = future_position[0];
-	new_position[1] = future_position[1];
-	new_position[2] = future_position[2];
+    new_position[0]= first_order_filter(prev_position[0], future_position[0], 0.1, dt);
+	new_position[1]= first_order_filter(prev_position[1], future_position[1], 0.1, dt);
+	new_position[2]= first_order_filter(prev_position[2], future_position[2], 0.1, dt);
+	//new_position[0] = future_position[0];
+	//new_position[1] = future_position[1];
+	//new_position[2] = future_position[2];
+
 
 
 	/*--------------------------------- Update for next call ---------------------------------*/
+
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 3; j++)
@@ -202,8 +207,9 @@ void kalman(double new_position[3], double odometry_position[3], double tria_pos
 		}
 		prev_position[i] = future_position[i];
 	}
-//	std::cout << "tria: " << tria_position[0] << " odo: " << odometry_position[0] << " kal: " << new_position[0] << "\n";
 
+
+//	std::cout << "tria: " << tria_position[0] << " odo: " << odometry_position[0] << " kal: " << new_position[0] << "\n";
 
 }
 
@@ -241,8 +247,8 @@ void kalman(CtrlStruct *cvs)
 //	rob_pos->x = position_post_kalman[0];
 //	rob_pos->y = position_post_kalman[1];
 //	rob_pos->theta = position_post_kalman[2];
-//	printf("%f \n", position_post_kalman[0]);
-//	set_plot(position_post_kalman[0], "our X[m]");
+	printf("%f \n", position_post_kalman[0]);
+	set_plot(position_post_kalman[0], "our X[m]");
 //	set_plot(position_post_kalman[1], "our Y[m]");
 //	set_plot(position_post_kalman[2], "our Th[m]");
 }

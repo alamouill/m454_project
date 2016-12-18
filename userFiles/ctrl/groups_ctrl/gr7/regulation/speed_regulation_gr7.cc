@@ -18,8 +18,8 @@ void speed_regulation(CtrlStruct *cvs, double r_sp_ref, double l_sp_ref)
 	static int dejtouch = 0;
 	double r_sp, l_sp;
 	double dt;
-	double kp = 50;
-	double ki = 75;
+	double kp = 60; //50
+	double ki = 750;//75
 
 	// variables declaration
 	CtrlIn *inputs;
