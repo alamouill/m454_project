@@ -78,7 +78,13 @@ int index_predicted(double alpha_predicted, double alpha_a, double alpha_b, doub
 	return (pred_err_a < pred_err_b) ? ((pred_err_a < pred_err_c) ? 0 : 2) : ((pred_err_b < pred_err_c) ? 1 : 2);
 }
 
-
+/*! \brief calculates the angle given by the odometry to intialize the triangulation
+*
+* \param[in] x beacon position
+* \param[in] y beacon position
+* \param[in] robot position
+* \return angle estimated by odometry
+*/
 static double alpha_odo(double x_beac, double y_beac, RobotPosition* rob_pos)
 {
 	double alpha = atan2(y_beac - rob_pos->y, x_beac - rob_pos->x) - atan2(sin(rob_pos->theta), cos(rob_pos->theta));
@@ -86,7 +92,11 @@ static double alpha_odo(double x_beac, double y_beac, RobotPosition* rob_pos)
 		alpha -= sgn(alpha) * 2 * M_PI;
 	return alpha;
 }
-
+/*! \brief computes the angle between two successive beacons
+* \param[in] last fall time
+* \param[in] last rise time
+* \return angle between the two beacons
+*/
 static double alpha_laser(double alpha_falling, double alpha_rising)
 {
 	double alpha;
