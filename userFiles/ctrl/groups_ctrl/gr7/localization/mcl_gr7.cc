@@ -1,3 +1,9 @@
+/* Mobile Robots Project - mcl_gr7.cc
+ * Version 1
+ * Last Update: 18/10/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
 #include "mcl_gr7.h"
 #include "odometry_gr7.h"
 #include "triangulation_gr7.h"
