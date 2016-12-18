@@ -11,6 +11,8 @@ NAMESPACE_INIT(ctrlGr7);
  */
 void speed_regulation(CtrlStruct *cvs, double r_sp_ref, double l_sp_ref)
 {
+	// variables declaration
+	
 	static double int_valr = 0;
 	static double int_vall = 0;
 	static double var_r;
@@ -21,7 +23,6 @@ void speed_regulation(CtrlStruct *cvs, double r_sp_ref, double l_sp_ref)
 	double kp = 50; //50
 	double ki = 250;//75
 
-	// variables declaration
 	CtrlIn *inputs;
 	CtrlOut *outputs;
 	SpeedRegulation *sp_reg;
