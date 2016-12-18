@@ -1,3 +1,11 @@
+/* Mobile Robots Project - calibration_gr7.cc
+ * Calibrate the position of the Robot
+ * Version 1.2
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
+
 #include "calibration_gr7.h"
 #include "speed_regulation_gr7.h"
 #include "odometry_gr7.h"
