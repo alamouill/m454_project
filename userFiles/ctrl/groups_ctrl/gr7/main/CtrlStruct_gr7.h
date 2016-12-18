@@ -1,8 +1,9 @@
-/*! 
- * \author Group 7
- * \file CtrlStruct_gr7.h
- * \brief Controller main structure
- */
+/* Mobile Robots Project - CtrlStruct_gr7.h
+ * Initialise the control structure of the robot
+ * Version 1.2
+ * Last Update: 11/11/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #ifndef _CTRL_STRUCT_GR7_H_
 #define _CTRL_STRUCT_GR7_H_
