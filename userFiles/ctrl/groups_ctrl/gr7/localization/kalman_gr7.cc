@@ -1,3 +1,10 @@
+/* Mobile Robots Project - kalman_gr7.cc
+ * Kalman Filter on robot position using odometry and triangulation
+ * Version 2.1
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
 #include "kalman_gr7.h"
 #include "odometry_gr7.h"
 #include "triangulation_gr7.h"
@@ -86,15 +93,15 @@ void substract_matrices(double a[3][3], double b[3][3], double result[3][3])
 	}
 }
 
-// new_position est un tableau dans lequel sera enregitré la nouvelle position (x,y,theta).
+// new_position est un tableau dans lequel sera enregitrÃ© la nouvelle position (x,y,theta).
 // measured_position est un tableau contenant la mesure faite par triangulation (x,y,theta).
-// command est un tableau contenant la commande de vitesse envoyée à chaque roue (w_r, w_l)
-// dt est l'interval de temps considéré.
+// command est un tableau contenant la commande de vitesse envoyÃ©e Ã  chaque roue (w_r, w_l)
+// dt est l'interval de temps considÃ©rÃ©.
 // theta est l'orientation du robot
 void kalman(double new_position[3], double odometry_position[3], double tria_position[3], float command[2], float dt)
 {
 	int i = 0, j = 0;
-	/*------------------------ Déclaration des matrices ---------------------*/
+	/*------------------------ DÃ©claration des matrices ---------------------*/
 	static int init = false; 
 	static double prev_position[3] = { 0,0,0 };
 	double future_position[3] = { 0,0,0 };
