@@ -1,8 +1,9 @@
-/*! 
- * \author Group 7
- * \file speed_regulation_gr7.cc
- * \brief speed regulation
- */
+/* Mobile Robots Project - speed_regulation_gr7.cc
+ * brief speed regulation
+ * Version 1.8
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #include "speed_regulation_gr7.h"
 #include "useful_gr7.h"
