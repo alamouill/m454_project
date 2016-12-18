@@ -1,8 +1,10 @@
-/*! 
- * \author Group 7
- * \file speed_regulation.h
- * \brief speed regulation
- */
+/* Mobile Robots Project - speed_regulation.h
+ * Speed regulation
+ * Version 1
+ * Last Update: 11/09/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
 
 #ifndef _SPEED_REGULATION_GR7_H_
 #define _SPEED_REGULATION_GR7_H_ 
