@@ -8,15 +8,19 @@
 
 NAMESPACE_INIT(ctrlGr7);
 
-#define KPOT    8     /// 8
+#define KPOT    8.5     /// 8
 #define KOPP    0.45   /// 0.45
-#define K_FROTT    0.02    /// 0
+#define K_FROTT    0.03    /// 0
 #define K_VITESSE  7   /// 9
-#define K_GOAL     7.77   /// 6.5
+#define K_GOAL     6.5   /// 6.5
 #define M_TO_MM    1000
 #define DSTARGOAL  130
 #define D_OPP    0.45
 #define NO_GOAL    3666
+
+//! defines the Team the robot is on.
+enum class TEAM : int { BLUE, YELLOW };
+TEAM myTeam = TEAM::BLUE;
 
 static double force_map[63][43][2] = {
 	{ { { 10.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 2.78225 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.14750 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.25160 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.27073 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -1.48500 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -5.38641 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 5.37724 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.23340 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.87677 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -2.77308 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } } },
@@ -109,18 +113,13 @@ std::vector<NODE*> nodes;
 //! throught the vector of nodes by giving the ID.
 std::vector<int> m_paths[NUMNODE][NUMNODE];
 
-//! defines the Team the robot is on.
-enum class Team : int { BLUE, YELLOW };
-Team myTeam = Team::BLUE;
-
-
 /*! \brief intiializes the nodes in the graph given a TEAM. This will determine
 * the coordinates of all the intermediate nodes as well as the pucks.
 */
 void initializeNodes()
 {
 	int k;
-	if (myTeam == Team::BLUE)
+	if (myTeam == TEAM::BLUE)
 	{
 		k = 1;
 	}
@@ -134,7 +133,7 @@ void initializeNodes()
 	//! level 2 pucks
 	nodes.push_back(new NODE(250, k * 1250));
 	nodes.push_back(new NODE(100, k * 0));
-	nodes.push_back(new NODE(250, k*-1250));
+	nodes.push_back(new NODE(250, -k * 1250));
 	//! level 1 pucks
 	nodes.push_back(new NODE(700, -k * 600));
 	nodes.push_back(new NODE(-400, -k * 600));
@@ -386,7 +385,7 @@ void storePathForNodej(int parent[], int j, std::vector<int> *path)
 	storePathForNodej(parent, parent[j], path);
 	//! add the current node to the path
 	path->push_back(j);
-//	printf("%d ", j);
+	//	printf("%d ", j);
 }
 
 /*! Code adapted from :http://www.geeksforgeeks.org/printing-paths-dijkstras-shortest-path-algorithm/
@@ -463,7 +462,7 @@ void dijkstra(int graph[NUMNODE][NUMNODE], int src)
 			}
 	}
 
-	//! print the constructed distance array
+	//! store the constructed distance array
 	storeAllPathsFromSourceNode(dist, parent, src);
 }
 
@@ -492,25 +491,31 @@ void init_djikstra()
 
 
 /*! \brief initialize the path-planning algorithm (memory allocated)
- * 
- * \param[in,out] path path-planning main structure
- */
-PathPlanning* init_path_planning()
+*
+* \param[in,out] path path-planning main structure
+*/
+PathPlanning* init_path_planning(CtrlStruct *cvs)
 {
 	PathPlanning *path;
 
 	// memory allocation
-	path = (PathPlanning*) malloc(sizeof(PathPlanning));
+	path = (PathPlanning*)malloc(sizeof(PathPlanning));
 
 	// ----- path-planning initialization start ----- //
 	path->nextGoal[0] = NO_GOAL;
 	path->nextGoal[1] = NO_GOAL;
 	path->speed[0] = 0;
 	path->speed[1] = 0;
-	path->theta = M_PI/2;
+	path->theta = M_PI / 2;
 	// ----- path-planning initialization end ----- //
 
 	// ----- init djikstra ------------------------ //
+	if (cvs->team_id == TEAM_B) {
+		myTeam = TEAM::BLUE;
+	}
+	else {
+		myTeam = TEAM::YELLOW;
+	}
 	init_djikstra();
 
 	// return structure initialized
@@ -518,9 +523,9 @@ PathPlanning* init_path_planning()
 }
 
 /*! \brief close the path-planning algorithm (memory released)
- * 
- * \param[in,out] path path-planning main structure
- */
+*
+* \param[in,out] path path-planning main structure
+*/
 void free_path_planning(PathPlanning *path)
 {
 	// ----- path-planning memory release start ----- //
@@ -543,7 +548,7 @@ static void force2Goal(double* force2Goal_x, double* force2Goal_y, double goal_x
 		*force2Goal_y = 0;
 		return;
 	}
-	
+
 	// X and Y
 	double dist2Goal_x = goal_x - pos_x;
 	double dist2Goal_y = goal_y - pos_y;
@@ -620,7 +625,7 @@ void path_planning(CtrlStruct *cvs)
 
 	// Compute the speed in X and Y
 	//printf("%f \n", norm_dist(path->nextGoal[0] - rob_pos->x*M_TO_MM, path->nextGoal[1] - rob_pos->y*M_TO_MM));
-//	printf("%d \n", cvs->inputs->target_detected);
+	//	printf("%d \n", cvs->inputs->target_detected);
 	if (norm_dist(path->nextGoal[0] - rob_pos->x*M_TO_MM, path->nextGoal[1] - rob_pos->y*M_TO_MM) > DSTARGOAL)
 	{
 		path->speed[0] = K_FROTT*last_speed_x + KPOT*(force_map[indice_x][indice_y][0]) + force2Goal_x - force2Opp_x;
@@ -635,7 +640,7 @@ void path_planning(CtrlStruct *cvs)
 	// Convert the speed X,Y -> Pho, Theta
 	path->linspeed = K_VITESSE*sqrt(path->speed[0] * path->speed[0] + path->speed[1] * path->speed[1]);
 	path->theta = atan2(path->speed[1], path->speed[0]);
-	printf("force bitch %f \t %f \t %f \t %f\n", path->speed[0], path->speed[1], path->linspeed, path->theta);
+	//	printf("force bitch %f \t %f \t %f \t %f\n", path->speed[0], path->speed[1], path->linspeed, path->theta);
 	// Save the current speed
 	last_speed_x = path->speed[0];
 	last_speed_y = path->speed[1];
@@ -649,14 +654,14 @@ void path_planning(CtrlStruct *cvs)
 */
 void update_path_planning(CtrlStruct *cvs)
 {
-	double rob_pos[] = { cvs->rob_pos->x*1000, cvs->rob_pos->y*1000 };
-//	std::cout << ("update_path_planning\t") << cvs->path->nextGoal[0] << "\t rob pos" <<rob_pos[0] << "\n";
+	double rob_pos[] = { cvs->rob_pos->x * 1000, cvs->rob_pos->y * 1000 };
+	//	std::cout << ("update_path_planning\t") << cvs->path->nextGoal[0] << "\t rob pos" <<rob_pos[0] << "\n";
 	// Definitions
 	//printf("%f \n", get_Distance(cvs->path->nextGoal, rob_pos));
 	if (get_Distance(cvs->path->nextGoal, rob_pos) < 150) {
-//		printf("go to next node\n");
+		//		printf("go to next node\n");
 		cvs->path->positionOnPath++;
-//		std::cout << ("go to next node1\t") << cvs->path->positionOnPath << " " << m_paths[cvs->path->startID][cvs->path->goalID].size() << "\n";
+		//		std::cout << ("go to next node1\t") << cvs->path->positionOnPath << " " << m_paths[cvs->path->startID][cvs->path->goalID].size() << "\n";
 		if (m_paths[cvs->path->startID][cvs->path->goalID].size() > cvs->path->positionOnPath) {
 			std::pair<int, int> nextNode = nodes.at(m_paths[cvs->path->startID][cvs->path->goalID]
 				.at(cvs->path->positionOnPath))->pos;
@@ -664,7 +669,7 @@ void update_path_planning(CtrlStruct *cvs)
 			printf("go to next node2\n");
 			cvs->path->nextGoal[0] = nextNode.first;
 			cvs->path->nextGoal[1] = nextNode.second;
-			std::cout << ("go to next node finished: \t") << cvs->path->nextGoal[0] << "\t" << cvs->path->nextGoal[1] << "\n";
+			std::cout << ("NEXT INTERMEDIATE GOAL: \t") << cvs->path->nextGoal[0] << "\t" << cvs->path->nextGoal[1] << "\n";
 		}
 
 	}
@@ -689,7 +694,7 @@ void set_goal(PathPlanning *path, std::pair<int, int> pos, std::pair<int, int> g
 		{
 			std::pair<int, int> nextNode = nodes.at(m_paths[path->startID][path->goalID].at(0))->pos;
 			path->positionOnPath = 0;
-
+			std::cout << "_pp next goal set as: " << nextNode.first << nextNode.second << "\n";
 			path->nextGoal[0] = nextNode.first;
 			path->nextGoal[1] = nextNode.second;
 		}

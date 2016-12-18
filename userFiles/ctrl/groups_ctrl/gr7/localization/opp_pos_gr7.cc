@@ -9,9 +9,9 @@
 NAMESPACE_INIT(ctrlGr7);
 
 /*! \brief compute the opponents position using the tower
- * 
- * \param[in,out] cvs controller main structure
- */
+*
+* \param[in,out] cvs controller main structure
+*/
 void opponents_tower(CtrlStruct *cvs)
 {
 	// variables declaration
@@ -30,7 +30,7 @@ void opponents_tower(CtrlStruct *cvs)
 	OpponentsPosition *opp_pos;
 
 	// variables initialization
-	inputs  = cvs->inputs;
+	inputs = cvs->inputs;
 	rob_pos = cvs->rob_pos;
 	opp_pos = cvs->opp_pos;
 
@@ -67,8 +67,8 @@ void opponents_tower(CtrlStruct *cvs)
 	// rise and fall angles of the second opponent
 	if (nb_opp == 2)
 	{
-		rise_index_2 = (rise_index_1-1 < 0) ? NB_STORE_EDGE-1 : rise_index_1-1;
-		fall_index_2 = (fall_index_1-1 < 0) ? NB_STORE_EDGE-1 : fall_index_1-1;
+		rise_index_2 = (rise_index_1 - 1 < 0) ? NB_STORE_EDGE - 1 : rise_index_1 - 1;
+		fall_index_2 = (fall_index_1 - 1 < 0) ? NB_STORE_EDGE - 1 : fall_index_1 - 1;
 
 		rise_2 = inputs->last_rising[rise_index_2];
 		fall_2 = inputs->last_falling[fall_index_2];
@@ -93,33 +93,34 @@ void opponents_tower(CtrlStruct *cvs)
 		// map last positions to new ones with minimal displacement between them
 		// do first order filter
 		// update last values accordingly
-			if (distVar0<distVar1) {
-				opp_pos->x[0] = first_order_filter(last_opp_0[0], opp_pos->x[0], 0.2, delta_t);
-				opp_pos->y[0] = first_order_filter(last_opp_0[1], opp_pos->y[0], 0.2, delta_t);
+		if (distVar0<distVar1) {
+			opp_pos->x[0] = first_order_filter(last_opp_0[0], opp_pos->x[0], 0.2, delta_t);
+			opp_pos->y[0] = first_order_filter(last_opp_0[1], opp_pos->y[0], 0.2, delta_t);
 
-				opp_pos->x[1] = first_order_filter(last_opp_1[0], opp_pos->x[1], 0.2, delta_t);
-				opp_pos->y[1] = first_order_filter(last_opp_1[1], opp_pos->y[1], 0.2, delta_t);
+			opp_pos->x[1] = first_order_filter(last_opp_1[0], opp_pos->x[1], 0.2, delta_t);
+			opp_pos->y[1] = first_order_filter(last_opp_1[1], opp_pos->y[1], 0.2, delta_t);
 
-				last_opp_0[0] = opp_pos->x[0];
-				last_opp_0[1] = opp_pos->y[0];
-				last_opp_1[0] = opp_pos->x[1];
-				last_opp_1[1] = opp_pos->y[1];
-			}
-			else {
-				opp_pos->x[0] = first_order_filter(last_opp_1[0], opp_pos->x[0], 0.2, delta_t);
-				opp_pos->y[0] = first_order_filter(last_opp_1[1], opp_pos->y[0], 0.2, delta_t);
+			last_opp_0[0] = opp_pos->x[0];
+			last_opp_0[1] = opp_pos->y[0];
+			last_opp_1[0] = opp_pos->x[1];
+			last_opp_1[1] = opp_pos->y[1];
+		}
+		else {
+			opp_pos->x[0] = first_order_filter(last_opp_1[0], opp_pos->x[0], 0.2, delta_t);
+			opp_pos->y[0] = first_order_filter(last_opp_1[1], opp_pos->y[0], 0.2, delta_t);
 
-				opp_pos->x[1] = first_order_filter(last_opp_0[0], opp_pos->x[1], 0.2, delta_t);
-				opp_pos->y[1] = first_order_filter(last_opp_0[1], opp_pos->y[1], 0.2, delta_t);
+			opp_pos->x[1] = first_order_filter(last_opp_0[0], opp_pos->x[1], 0.2, delta_t);
+			opp_pos->y[1] = first_order_filter(last_opp_0[1], opp_pos->y[1], 0.2, delta_t);
 
-				last_opp_0[0] = opp_pos->x[1];
-				last_opp_0[1] = opp_pos->y[1];
-				last_opp_1[0] = opp_pos->x[0];
-				last_opp_1[1] = opp_pos->y[0];
-			}
-		
+			last_opp_0[0] = opp_pos->x[1];
+			last_opp_0[1] = opp_pos->y[1];
+			last_opp_1[0] = opp_pos->x[0];
+			last_opp_1[1] = opp_pos->y[0];
+		}
+
 	}
 	else {
+		// case 1 oponent
 		single_opp_tower(rise_1, fall_1, rob_pos->x, rob_pos->y, rob_pos->theta, &(opp_pos->x[0]), &(opp_pos->y[0]));
 		opp_pos->x[0] = first_order_filter(last_opp_0[0], opp_pos->x[0], 0.2, delta_t);
 		opp_pos->y[0] = first_order_filter(last_opp_0[1], opp_pos->y[0], 0.2, delta_t);
@@ -127,82 +128,59 @@ void opponents_tower(CtrlStruct *cvs)
 		last_opp_0[1] = opp_pos->y[0];
 
 	}
-	//std::cout << "Oponents position:\t" << opp_pos->x[0] << "\t" << opp_pos->y[0] << "\n";
-	//std::cout << "Lponents position:\t" << last_opp_x0 << "\t" << last_opp_y0 << "\n";
-
-	//assistant à demande!! pu.bai@epfl.ch
-
-	// ----- opponents position computation end ----- //
-
-//	set_plot(last_opp_0[0], "X-pos-Opp 1");
-//	set_plot(last_opp_0[1], "Y-pos-Opp 1");
-//	set_plot(last_opp_1[0], "X-pos-Opp 2");
-//	set_plot(last_opp_1[1], "Y-pos-Opp 2");
-
-//	double distance = sqrt((opp_pos->x[0] - rob_pos->x)*(opp_pos->x[0] - rob_pos->x) + (opp_pos->y[0] - rob_pos->y)*(opp_pos->y[0] - rob_pos->y));
-
-
 }
 
 /*! \brief compute a single opponent position
- * 
- * \param[in] last_rise last rise relative angle [rad]
- * \param[in] last_fall last fall relative angle [rad]
- * \param[in] rob_x robot x position [m]
- * \param[in] rob_y robot y position [m]
- * \param[in] rob_theta robot orientation [rad]
- * \param[out] new_x_opp new known x opponent position
- * \param[out] new_y_opp new known y opponent position
- * \return 1 if computation successful, 0 otherwise
- */
+*
+* \param[in] last_rise last rise relative angle [rad]
+* \param[in] last_fall last fall relative angle [rad]
+* \param[in] rob_x robot x position [m]
+* \param[in] rob_y robot y position [m]
+* \param[in] rob_theta robot orientation [rad]
+* \param[out] new_x_opp new known x opponent position [m]
+* \param[out] new_y_opp new known y opponent position [m]
+* \return 1 if computation successful, 0 otherwise
+*/
 int single_opp_tower(double last_rise, double last_fall, double rob_x, double rob_y, double rob_theta, double *new_x_opp, double *new_y_opp)
 {
 	*new_x_opp = 0.0;
 	*new_y_opp = 0.0;
-	
-	//correct theta to stay within 0:2PI
+
+	//correct theta to stay always positiv
 	double dtheta = (last_fall - last_rise);
 	if (dtheta < 0)
 	{
-		dtheta = dtheta + 2*M_PI;
-	} else {
-
+		dtheta = dtheta + 2 * M_PI;
 	}
+
+	//compute theta to center of oponent
 	double theta_rel = last_rise + dtheta / 2;
 
-//	tan(dtheta) = dia_robo / distance;
-	double distance = fabs(0.04 / sin(dtheta/2));
-	//double drelX = distance*cos((dtheta / 2) + last_rise); //distance X from robot to oponent, tour-tour in robot x-y
-	//double drelY = distance*sin((dtheta / 2) + last_rise);
-	//std::cout << "dtheta" << dtheta*180/M_PI << "\n";
-	//std::cout << "drelX: " << drelX << "\n";
-	//std::cout << "drelY: " << drelY << "\n";
-//	std::cout << "robTheta" << rob_theta * 180 / M_PI << "\n";
-	double xTower = rob_x +ROB_TOW*cos(rob_theta);
-	double yTower = rob_y +ROB_TOW*sin(rob_theta);
+	//compute distance to oponent
+	double distance = fabs(0.04 / sin(dtheta / 2));
 
-	//rotation to absolute x,y
-	//double dxAbs = drelX + xTower*cos((dtheta / 2) + last_rise) - yTower*sin((dtheta / 2) + last_rise);
-	//double dyAbs = drelY + xTower*sin((dtheta / 2) + last_rise) + yTower*cos((dtheta / 2) + last_rise);
+	//calculate position of robot tower
+	double xTower = rob_x + ROB_TOW*cos(rob_theta);
+	double yTower = rob_y + ROB_TOW*sin(rob_theta);
 
-
-
-	//direct
+	//calculate abs position of oponent
 	double dxAbs = xTower + distance*cos(theta_rel + rob_theta);
 	double dyAbs = yTower + distance*sin(theta_rel + rob_theta);
 
-	*new_x_opp =  dxAbs;
-	*new_y_opp =  dyAbs;
-	
+	*new_x_opp = dxAbs;
+	*new_y_opp = dyAbs;
+
 
 	return 1;
 }
 
 /*! \brief check if there is an opponent in front of the robot
- * 
- * \param[in] cvs controller main structure
- * \return 1 if opponent robot in front of the current robot
- */
+*
+*   Function not used, therefore not completed.
+*
+* \param[in] cvs controller main structure
+* \return 1 if opponent robot in front of the current robot
+*/
 int check_opp_front(CtrlStruct *cvs)
 {
 	// variables declaration
@@ -229,7 +207,7 @@ int check_opp_front(CtrlStruct *cvs)
 		exit(EXIT_FAILURE);
 	}
 
-	for(i=0; i<nb_opp; i++)
+	for (i = 0; i<nb_opp; i++)
 	{
 		// ----- opponents check computation start ----- //
 

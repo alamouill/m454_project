@@ -21,10 +21,10 @@ typedef struct Strategy
 	int index_goal;
 } Strategy;
 //strategy struct enum
-enum{ X, Y,SCORE,OPP_CAP_STATE};
+enum { X, Y, SCORE, OPP_CAP_STATE };
 
 /// 'main_state' states (adapt with your own states)
-enum { GAME_STATE_START, GAME_STATE_DRIVE, GAME_STATE_Capture, GAME_STATE_SET_NEW_GOAL, GAME_STATE_DRIVE_HOME};
+enum { GAME_STATE_START, GAME_STATE_DRIVE, GAME_STATE_Capture, GAME_STATE_SET_NEW_GOAL, GAME_STATE_DRIVE_HOME, GAME_STATE_END };
 
 /// oponents on target states
 enum { empty, capturing, capturingCheck, capturingCheckOk, gone };
