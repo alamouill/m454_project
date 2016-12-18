@@ -1,1 +1,89 @@
-﻿  MBsysC_loadXML.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_load_xml\Release\MBsysC_loadXML.lib
+﻿  Building Custom Rule C:/Users/csbau/mobile_robots/m454_project/mbsysCopy/mbs_common/mbs_load_xml/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_load_xml\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9002: ignoring unknown option '-O3'
+  mbs_load_xml.c
+c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_load_xml\mbs_load_xml.h(24): warning C4273: 'mbs_delete_data': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_load_xml\mbs_load_xml.h(21): note: see previous definition of 'mbs_delete_data'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_load_xml.c(23): warning C4273: 'mbs_load': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_load_xml\mbs_load_xml.h(16): note: see previous definition of 'mbs_load'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_load_xml.c(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  mbs_xml_reader.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(999): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1002): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1010): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1013): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1022): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1026): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1030): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1527): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1591): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1615): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1640): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1718): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1751): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1853): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1885): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(1923): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2006): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2077): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2136): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2197): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\string.h(530): note: see declaration of 'strdup'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2380): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2386): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2392): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2398): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2404): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2463): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2415): warning C4101: 'i': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2511): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2479): warning C4101: 'i': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2551): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2526): warning C4101: 'i': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2587): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2597): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(2661): warning C4101: 'old_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3178): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3239): warning C4101: 'mds_d_data_strct': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3236): warning C4101: 'new_rod_list_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3234): warning C4101: 'old_point_list_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3235): warning C4101: 'old_joint_list_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3237): warning C4101: 'new_user_model_list_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3233): warning C4101: 'old_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3231): warning C4101: 'i': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3237): warning C4101: 'old_user_model_list_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3236): warning C4101: 'old_rod_list_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3235): warning C4101: 'new_joint_list_node': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_load_xml\mbs_xml_reader.c(3234): warning C4101: 'new_point_list_node': unreferenced local variable
+  Generating Code...
+  MBsysC_loadXML.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_load_xml\Release\MBsysC_loadXML.lib

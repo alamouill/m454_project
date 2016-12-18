@@ -40,7 +40,7 @@
 blue_ctrl   : Gr7Ctrl
 red_ctrl    : NoCtrl
 yellow_ctrl : NoCtrl
-white_ctrl  : RestingCtrl
+white_ctrl  : KeyboardCtrl
 
 
 # -- ROBOT INITIAL POSITIONS -- #
@@ -117,7 +117,7 @@ R3_uncert : 10.0
 #
 actuator_noise : 0.07
 
-wheel_friction : 0.2
+wheel_friction : 0
 tower_friction : 0.02
 
 

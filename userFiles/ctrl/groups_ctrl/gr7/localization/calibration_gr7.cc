@@ -37,26 +37,113 @@ void calibration(CtrlStruct *cvs)
 	
 	t = inputs->t;
 	team_id = cvs->team_id;
-
 	// finite state machine (FSM)
-	switch (calib->flag)
-	{
+	//team blue
+	if(team_id == 0){
+		switch (calib->flag)
+		{
+			case CALIB_START: // start calibration
+				speed_regulation(cvs, -10.0, -10.0);
+				//if both switchs are true wall is touched --> calibrating & go to state A
+				if(inputs->u_switch[0] && inputs->u_switch[1])
+				{
+					cvs->rob_pos->theta = -M_PI_2;
+					cvs->rob_pos->y = (1.5 - 0.06); //1562 - distance du centre du robot
+					calib->flag = CALIB_STATE_A; // directly go to state A
+				}
+				calib->t_flag = t;
+				break;
+
+			case CALIB_STATE_A: // state A : get away from walls
+				speed_regulation(cvs, 10.0, 10.0);
+
+				// go to state B as soon as distance of 300mm from wall is achieved
+				if (cvs->rob_pos->y <= 1.2)
+				{
+					calib->flag = CALIB_STATE_B;
+
+					calib->t_flag = t;
+				}
+
+				break;
+
+			case CALIB_STATE_B: // state B: turns
+				speed_regulation(cvs, -5.0, 5.0);
+	
+				// go to state C if theta = ~PI
+				if (cvs->rob_pos->theta <= M_PI + 0.005 && cvs->rob_pos->theta >= M_PI -0.005)
+				{
+					calib->flag = CALIB_STATE_C;
+
+					calib->t_flag = t;
+				}
+				break;
+
+			case CALIB_STATE_C: // state C go backwards into wall
+				speed_regulation(cvs, -10.0, -10.0);
+
+				// go to state D when both switch touch the wall
+				if (inputs->u_switch[0] && inputs->u_switch[1])
+				{
+					cvs->rob_pos->x = (1.0-0.060);				//1.062-0.060
+					calib->flag = CALIB_STATE_D;
+
+					calib->t_flag = t;
+				}
+				break;
+				//realignement
+			case CALIB_STATE_D: // state C
+				speed_regulation(cvs, 10.0, 10.0);
+				// go to final state if centered
+				if (cvs->rob_pos->x <=0.750)
+				{
+					calib->flag = CALIB_STATE_E;
+
+					calib->t_flag = t;
+				}
+				break;		
+			case CALIB_STATE_E: // state C
+					speed_regulation(cvs, 10.0, -10.0);
+
+					// go to final state if in direction of map 
+					if (cvs->rob_pos->theta >= -M_PI_2 -0.01 && cvs->rob_pos->theta <= -M_PI_2 +0.01)
+					{
+						calib->flag = CALIB_FINISH;
+						cvs->main_state = WAIT_INIT_STATE;
+						calib->t_flag = t;
+					}
+					break;
+			case CALIB_FINISH: // wait before the match is starting
+				speed_regulation(cvs, 0.0, 0.0);
+				break;
+	
+			default:
+				printf("Error: unknown state : %d !\n", calib->flag);
+				exit(EXIT_FAILURE);
+		}
+	}
+		
+	//team yellow
+	else if (team_id == 1) {
+		switch (calib->flag)
+		{
 		case CALIB_START: // start calibration
-			speed_regulation(cvs, -20.0, -20.0);
-			if (t>-14.0)
+			speed_regulation(cvs, -10.0, -10.0);
+			//if both switchs are true wall is touched --> calibrating & go to state A
+			if (inputs->u_switch[0] && inputs->u_switch[1])
 			{
-				cvs->rob_pos->theta = -M_PI_2;
-				cvs->rob_pos->y = (1.5 - 0.06); //1562 - distance du centre du robot
+				cvs->rob_pos->theta = M_PI_2;
+				cvs->rob_pos->y = (-1.5 + 0.06); //1562 - distance du centre du robot
 				calib->flag = CALIB_STATE_A; // directly go to state A
 			}
 			calib->t_flag = t;
 			break;
 
-		case CALIB_STATE_A: // state A
-			speed_regulation(cvs, 20.0, 20.0);
+		case CALIB_STATE_A: // state A : get away from walls
+			speed_regulation(cvs, 10.0, 10.0);
 
-			// go to state B after 1 seconds
-			if (t - calib->t_flag > 0.5)
+			// go to state B as soon as distance of 300mm from wall is achieved
+			if (cvs->rob_pos->y >= -1.2)
 			{
 				calib->flag = CALIB_STATE_B;
 
@@ -65,11 +152,11 @@ void calibration(CtrlStruct *cvs)
 
 			break;
 
-		case CALIB_STATE_B: // state B
-			speed_regulation(cvs, -10.0, 10.0);
-	
-			// go to state C after .7s
-			if (t - calib->t_flag > 0.7)
+		case CALIB_STATE_B: // state B: turns
+			speed_regulation(cvs, 5.0, -5.0);
+
+			// go to state C if theta = ~PI
+			if (cvs->rob_pos->theta <= M_PI + 0.005 && cvs->rob_pos->theta >= M_PI - 0.005)
 			{
 				calib->flag = CALIB_STATE_C;
 
@@ -77,13 +164,13 @@ void calibration(CtrlStruct *cvs)
 			}
 			break;
 
-		case CALIB_STATE_C: // state C
+		case CALIB_STATE_C: // state C go backwards into wall
 			speed_regulation(cvs, -10.0, -10.0);
 
-			// go to state D after 1.5 seconds
-			if (t - calib->t_flag > 1.5)
+			// go to state D when both switch touch the wall
+			if (inputs->u_switch[0] && inputs->u_switch[1])
 			{
-				cvs->rob_pos->x = (1.0-0.060);				//1.062-0.060
+				cvs->rob_pos->x = (1.0 - 0.060);				//1.062-0.060
 				calib->flag = CALIB_STATE_D;
 
 				calib->t_flag = t;
@@ -91,35 +178,36 @@ void calibration(CtrlStruct *cvs)
 			break;
 			//realignement
 		case CALIB_STATE_D: // state C
-			speed_regulation(cvs, 20.0, 20.0);
-
-			// go to final state after 1 seconds
-			if (t - calib->t_flag > 0.5)
+			speed_regulation(cvs, 10.0, 10.0);
+			std::cout << "pos x: " << cvs->rob_pos->x << "\n";
+			// go to final state if centered
+			if (cvs->rob_pos->x <= 0.750)
 			{
 				calib->flag = CALIB_STATE_E;
 
 				calib->t_flag = t;
 			}
-			break;		
+			break;
 		case CALIB_STATE_E: // state C
-				speed_regulation(cvs, 10.0, -10.0);
+			speed_regulation(cvs, -10.0, 10.0);
 
-				// go to final state after 2 seconds
-				if (t - calib->t_flag > 0.7)
-				{
-					calib->flag = CALIB_FINISH;
-					cvs->main_state = WAIT_INIT_STATE;
-					std::cout << "END OF CALIBRATION\n";
-					calib->t_flag = t;
-				}
-				break;
+			// go to final state if in direction of map 
+			if (cvs->rob_pos->theta >= M_PI_2 - 0.01 && cvs->rob_pos->theta <= M_PI_2 + 0.01)
+			{
+				calib->flag = CALIB_FINISH;
+				cvs->main_state = WAIT_INIT_STATE;
+				std::cout << "END OF CALIBRATION\n";
+				calib->t_flag = t;
+			}
+			break;
 		case CALIB_FINISH: // wait before the match is starting
 			speed_regulation(cvs, 0.0, 0.0);
 			break;
-	
+
 		default:
 			printf("Error: unknown state : %d !\n", calib->flag);
 			exit(EXIT_FAILURE);
+		}
 	}
 }
 

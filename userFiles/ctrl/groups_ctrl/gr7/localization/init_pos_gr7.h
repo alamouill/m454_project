@@ -20,6 +20,7 @@ typedef struct RobotPosition
 	double theta; ///< robot orientation [rad]
 
 	double last_t; ///< last time position was updated
+	double last_dT; ///< last dT calculated
 
 } RobotPosition;
 

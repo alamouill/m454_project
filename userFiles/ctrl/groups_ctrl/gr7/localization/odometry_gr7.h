@@ -9,6 +9,7 @@
  
 #include "namespace_ctrl.h"
 #include "CtrlStruct_gr7.h"
+#include <stdio.h>
 
 NAMESPACE_INIT(ctrlGr7);
 

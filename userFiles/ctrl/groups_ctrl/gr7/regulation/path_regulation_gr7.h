@@ -11,7 +11,7 @@
 
 NAMESPACE_INIT(ctrlGr7);
 
-void follow_path(CtrlStruct *cvs);
+void follow_path(CtrlStruct *cvs, double theta_path, double linspeed_path, double theta_rob);
 
 NAMESPACE_CLOSE();
 

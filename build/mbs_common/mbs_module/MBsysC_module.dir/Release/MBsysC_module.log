@@ -1,1 +1,80 @@
-﻿  MBsysC_module.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_module\Release\MBsysC_module.lib
+﻿  Building Custom Rule C:/Users/csbau/mobile_robots/m454_project/mbsysCopy/mbs_common/mbs_module/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_module\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9002: ignoring unknown option '-O3'
+  mbs_calc_Fruc.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_calc_Fruc.c(16): warning C4101: 'ok': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_calc_Fruc.c(24): warning C4101: 'ind_x': unreferenced local variable
+  mbs_calc_force.c
+  mbs_close_loops.c
+  mbs_dirdyn.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(34): warning C4273: 'mbs_new_dirdyn': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_module\mbs_dirdyn.h(36): note: see previous definition of 'mbs_new_dirdyn'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(84): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(108): warning C4273: 'mbs_delete_dirdyn': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_module\mbs_dirdyn.h(89): note: see previous definition of 'mbs_delete_dirdyn'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(120): warning C4273: 'mbs_run_dirdyn': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_module\mbs_dirdyn.h(59): note: see previous definition of 'mbs_run_dirdyn'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(122): warning C4101: 'animFile': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(121): warning C4101: 'i': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(338): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(340): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(357): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(358): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(384): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(385): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(431): warning C4101: 'animFile': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(739): warning C4018: '<': signed/unsigned mismatch
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_dirdyn.c(750): warning C4018: '<': signed/unsigned mismatch
+  mbs_dirdynared.c
+  mbs_equil.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_equil.c(128): warning C4101: 'ind_c_test': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_equil.c(379): warning C4101: 'j': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_equil.c(417): warning C4101: 'k': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_equil.c(427): warning C4101: 'norm_pk': unreferenced local variable
+  mbs_linearipk.c
+  mbs_modal.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(257): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(259): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(261): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(426): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(431): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(436): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(806): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(932): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(939): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(918): warning C4101: 'n_cycle': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(918): warning C4101: 'N': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_modal.c(913): warning C4101: 'l': unreferenced local variable
+  mbs_part.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(28): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1269): note: see declaration of 'scanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(30): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1269): note: see declaration of 'scanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(32): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1269): note: see declaration of 'scanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(38): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt\stdio.h(1269): note: see declaration of 'scanf'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(166): warning C4101: 'indc': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(166): warning C4101: 'indl': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(324): warning C4101: 'hjfd': unreferenced local variable
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(537): warning C4273: 'mbs_run_part': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_module\mbs_part.h(71): note: see previous definition of 'mbs_run_part'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(755): warning C4273: 'mbs_new_part': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_module\mbs_part.h(78): note: see previous definition of 'mbs_new_part'
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_module\mbs_part.c(780): warning C4273: 'mbs_delete_part': inconsistent dll linkage
+  c:\users\csbau\mobile_robots\m454_project\mbsyscopy\mbs_common\mbs_module\mbs_part.h(85): note: see previous definition of 'mbs_delete_part'
+  Generating Code...
+  MBsysC_module.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\mbs_common\mbs_module\Release\MBsysC_module.lib

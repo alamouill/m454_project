@@ -48,11 +48,22 @@ void user_dirdyn_init(MbsData *mbs_data, MbsDirdyn *mbs_dd)
  */
 void user_dirdyn_loop(MbsData *mbs_data, MbsDirdyn *mbs_dd)
 {
-    set_plot(mbs_data->q[FJ_T1_robot_B_id] , "Blue_x_[m]") ;
-    set_plot(mbs_data->q[FJ_T2_robot_B_id] , "Blue_y_[m]") ;
-   // set_plot(mbs_data->q[FJ_R3_robot_B_id] , "Blue_theta_[rad]") ;
-	set_plot(mbs_data->q[FJ_T1_robot_W_id], "White_x_[m]");
-	set_plot(mbs_data->q[FJ_T2_robot_W_id], "White_y_[m]");
+//    set_plot(mbs_data->q[FJ_T1_robot_Y_id] , "True X[m] Y") ;
+//    set_plot(mbs_data->q[FJ_T2_robot_Y_id] , "True Y[m] Y") ;
+	set_plot(mbs_data->q[FJ_T1_robot_W_id], "True X[m] W");
+	set_plot(mbs_data->q[FJ_T2_robot_W_id], "True Y[m] W");
+
+/*	  double truedist = sqrt((mbs_data->q[FJ_T1_robot_W_id]- mbs_data->q[FJ_T1_robot_B_id])*(mbs_data->q[FJ_T1_robot_W_id] - mbs_data->q[FJ_T1_robot_B_id])
+		  + (mbs_data->q[FJ_T2_robot_B_id]- mbs_data->q[FJ_T2_robot_W_id])*(mbs_data->q[FJ_T2_robot_B_id] - mbs_data->q[FJ_T2_robot_W_id]));
+
+	  set_plot(truedist, "True dist[m]");*/
+
+	//our robot
+  //  set_plot(mbs_data->q[FJ_T1_robot_B_id] , "True X[m]") ;
+//	set_plot(mbs_data->q[FJ_T2_robot_B_id], "True Y[m]");
+//	set_plot(mbs_data->q[FJ_R3_robot_B_id], "True Theta[rad]");
+
+
 	simu_loop(mbs_data);
 }
 

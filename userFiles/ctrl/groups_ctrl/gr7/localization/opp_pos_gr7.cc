@@ -21,10 +21,9 @@ void opponents_tower(CtrlStruct *cvs)
 	double delta_t;
 	double rise_1, rise_2, fall_1, fall_2;
 
-	static double last_opp_x0=0;
-	static	double last_opp_y0=0;
-	static double last_opp_x1 = 0;
-	static	double last_opp_y1 = 0;
+	//x: index 0, y: index 1
+	static double last_opp_0[2] = { 0,0 };
+	static double last_opp_1[2] = { 0,0 };
 
 	CtrlIn *inputs;
 	RobotPosition *rob_pos;
@@ -74,27 +73,75 @@ void opponents_tower(CtrlStruct *cvs)
 		rise_2 = inputs->last_rising[rise_index_2];
 		fall_2 = inputs->last_falling[fall_index_2];
 	}
-
 	// ----- opponents position computation start ----- //
 
-	single_opp_tower(rise_1, fall_1, rob_pos->x, rob_pos->y, rob_pos->theta, &(opp_pos->x[0]), &(opp_pos->y[0]));
 
+
+	if (nb_opp == 2) {
+
+		single_opp_tower(rise_1, fall_1, rob_pos->x, rob_pos->y, rob_pos->theta, &(opp_pos->x[0]), &(opp_pos->y[0]));
+
+		single_opp_tower(rise_2, fall_2, rob_pos->x, rob_pos->y, rob_pos->theta, &(opp_pos->x[1]), &(opp_pos->y[1]));
+
+		double posRob0[] = { opp_pos->x[0],opp_pos->y[0] };
+		double posRob1[] = { opp_pos->x[1],opp_pos->y[1] };
+
+		// find distances of the robots to the last position saved
+		double distVar0 = get_Distance(posRob0, last_opp_0) + get_Distance(posRob1, last_opp_1);
+		double distVar1 = get_Distance(posRob0, last_opp_1) + get_Distance(posRob1, last_opp_0);
+
+		// map last positions to new ones with minimal displacement between them
+		// do first order filter
+		// update last values accordingly
+			if (distVar0<distVar1) {
+				opp_pos->x[0] = first_order_filter(last_opp_0[0], opp_pos->x[0], 0.2, delta_t);
+				opp_pos->y[0] = first_order_filter(last_opp_0[1], opp_pos->y[0], 0.2, delta_t);
+
+				opp_pos->x[1] = first_order_filter(last_opp_1[0], opp_pos->x[1], 0.2, delta_t);
+				opp_pos->y[1] = first_order_filter(last_opp_1[1], opp_pos->y[1], 0.2, delta_t);
+
+				last_opp_0[0] = opp_pos->x[0];
+				last_opp_0[1] = opp_pos->y[0];
+				last_opp_1[0] = opp_pos->x[1];
+				last_opp_1[1] = opp_pos->y[1];
+			}
+			else {
+				opp_pos->x[0] = first_order_filter(last_opp_1[0], opp_pos->x[0], 0.2, delta_t);
+				opp_pos->y[0] = first_order_filter(last_opp_1[1], opp_pos->y[0], 0.2, delta_t);
+
+				opp_pos->x[1] = first_order_filter(last_opp_0[0], opp_pos->x[1], 0.2, delta_t);
+				opp_pos->y[1] = first_order_filter(last_opp_0[1], opp_pos->y[1], 0.2, delta_t);
+
+				last_opp_0[0] = opp_pos->x[1];
+				last_opp_0[1] = opp_pos->y[1];
+				last_opp_1[0] = opp_pos->x[0];
+				last_opp_1[1] = opp_pos->y[0];
+			}
+		
+	}
+	else {
+		single_opp_tower(rise_1, fall_1, rob_pos->x, rob_pos->y, rob_pos->theta, &(opp_pos->x[0]), &(opp_pos->y[0]));
+		opp_pos->x[0] = first_order_filter(last_opp_0[0], opp_pos->x[0], 0.2, delta_t);
+		opp_pos->y[0] = first_order_filter(last_opp_0[1], opp_pos->y[0], 0.2, delta_t);
+		last_opp_0[0] = opp_pos->x[0];
+		last_opp_0[1] = opp_pos->y[0];
+
+	}
 	//std::cout << "Oponents position:\t" << opp_pos->x[0] << "\t" << opp_pos->y[0] << "\n";
 	//std::cout << "Lponents position:\t" << last_opp_x0 << "\t" << last_opp_y0 << "\n";
-	opp_pos->x[0] = first_order_filter(last_opp_x0, opp_pos->x[0], 0.2, delta_t);
-	opp_pos->y[0] = first_order_filter(last_opp_y0, opp_pos->y[0], 0.2, delta_t);
 
+	//assistant à demande!! pu.bai@epfl.ch
 
-	if(nb_opp==2){
-		opp_pos->x[1] = 0.0;
-		opp_pos->y[1] = 0.0;
-	}
 	// ----- opponents position computation end ----- //
 
-	set_plot(opp_pos->x[0], "X-pos-oponent");
-	set_plot(opp_pos->y[0], "Y-pos-OOponent");
-	last_opp_x0 = opp_pos->x[0];
-	last_opp_y0 = opp_pos->y[0];
+//	set_plot(last_opp_0[0], "X-pos-Opp 1");
+//	set_plot(last_opp_0[1], "Y-pos-Opp 1");
+//	set_plot(last_opp_1[0], "X-pos-Opp 2");
+//	set_plot(last_opp_1[1], "Y-pos-Opp 2");
+
+//	double distance = sqrt((opp_pos->x[0] - rob_pos->x)*(opp_pos->x[0] - rob_pos->x) + (opp_pos->y[0] - rob_pos->y)*(opp_pos->y[0] - rob_pos->y));
+
+
 }
 
 /*! \brief compute a single opponent position
@@ -112,28 +159,37 @@ int single_opp_tower(double last_rise, double last_fall, double rob_x, double ro
 {
 	*new_x_opp = 0.0;
 	*new_y_opp = 0.0;
-
+	
+	//correct theta to stay within 0:2PI
 	double dtheta = (last_fall - last_rise);
+	if (dtheta < 0)
+	{
+		dtheta = dtheta + 2*M_PI;
+	} else {
+
+	}
+	double theta_rel = last_rise + dtheta / 2;
+
 //	tan(dtheta) = dia_robo / distance;
 	double distance = fabs(0.04 / sin(dtheta/2));
-	double theta_rel = last_rise + dtheta / 2; ///todo change...
 	//double drelX = distance*cos((dtheta / 2) + last_rise); //distance X from robot to oponent, tour-tour in robot x-y
 	//double drelY = distance*sin((dtheta / 2) + last_rise);
 	//std::cout << "dtheta" << dtheta*180/M_PI << "\n";
 	//std::cout << "drelX: " << drelX << "\n";
 	//std::cout << "drelY: " << drelY << "\n";
-	double xTower = rob_x + ROB_TOW*cos(rob_theta);
-	double yTower = rob_y + ROB_TOW*sin(rob_theta);
+//	std::cout << "robTheta" << rob_theta * 180 / M_PI << "\n";
+	double xTower = rob_x +ROB_TOW*cos(rob_theta);
+	double yTower = rob_y +ROB_TOW*sin(rob_theta);
 
 	//rotation to absolute x,y
 	//double dxAbs = drelX + xTower*cos((dtheta / 2) + last_rise) - yTower*sin((dtheta / 2) + last_rise);
 	//double dyAbs = drelY + xTower*sin((dtheta / 2) + last_rise) + yTower*cos((dtheta / 2) + last_rise);
 
-	
+
 
 	//direct
 	double dxAbs = xTower + distance*cos(theta_rel + rob_theta);
-	double dyAbs = xTower + distance*sin(theta_rel + rob_theta);
+	double dyAbs = yTower + distance*sin(theta_rel + rob_theta);
 
 	*new_x_opp =  dxAbs;
 	*new_y_opp =  dyAbs;

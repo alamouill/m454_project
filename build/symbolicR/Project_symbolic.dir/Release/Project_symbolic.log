@@ -1,1 +1,25 @@
-﻿  Project_symbolic.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\symbolicR\Release\Project_symbolic.lib
+﻿  Building Custom Rule C:/Users/csbau/mobile_robots/m454_project/symbolicR/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\csbau\mobile_robots\m454_project\build\symbolicR\CMakeFiles\generate.stamp is up-to-date.
+cl : Command line warning D9002: ignoring unknown option '-O3'
+  mbs_dirdyna_m454_project.c
+C:\Users\csbau\mobile_robots\m454_project\symbolicR\mbs_dirdyna_m454_project.c(40): warning C4273: 'mbs_dirdyna': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\workR\..\mbsysCopy\mbs_common\mbs_struct\mbs_project_interface.h(84): note: see previous definition of 'mbs_dirdyna'
+  mbs_extforces_m454_project.c
+C:\Users\csbau\mobile_robots\m454_project\symbolicR\mbs_extforces_m454_project.c(40): warning C4273: 'mbs_extforces': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\workR\..\mbsysCopy\mbs_common\mbs_struct\mbs_project_interface.h(69): note: see previous definition of 'mbs_extforces'
+  mbs_gensensor_m454_project.c
+C:\Users\csbau\mobile_robots\m454_project\symbolicR\mbs_gensensor_m454_project.c(39): warning C4273: 'mbs_gensensor': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\workR\..\mbsysCopy\mbs_common\mbs_struct\mbs_project_interface.h(73): note: see previous definition of 'mbs_gensensor'
+  mbs_sensor_m454_project.c
+C:\Users\csbau\mobile_robots\m454_project\symbolicR\mbs_sensor_m454_project.c(39): warning C4273: 'mbs_sensor': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\workR\..\mbsysCopy\mbs_common\mbs_struct\mbs_project_interface.h(77): note: see previous definition of 'mbs_sensor'
+  mbs_cons_hJ_void.c
+  mbs_cons_jdqd_void.c
+  mbs_accelred_void.c
+  mbs_invdyna_void.c
+  mbs_link_void.c
+  mbs_link3D_void.c
+C:\Users\csbau\mobile_robots\m454_project\mbsysCopy\mbs_common\mbs_void_symbolicR\mbs_link3D_void.c(18): warning C4273: 'mbs_link3D': inconsistent dll linkage
+  C:\Users\csbau\mobile_robots\m454_project\workR\..\mbsysCopy\mbs_common\mbs_struct\mbs_project_interface.h(67): note: see previous definition of 'mbs_link3D'
+  Generating Code...
+  Project_symbolic.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\symbolicR\Release\Project_symbolic.lib
