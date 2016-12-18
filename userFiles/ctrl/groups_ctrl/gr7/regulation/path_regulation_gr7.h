@@ -1,8 +1,9 @@
-/*! 
- * \author Group 7
- * \file path_regulation_gr7.h
- * \brief regulation to follow a given path
- */
+/* Mobile Robots Project - path_regulation_gr7.h
+ * regulation to follow a given path
+ * Version 1.3
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #ifndef _PATH_REGULATION_GR7_H_
 #define _PATH_REGULATION_GR7_H_
