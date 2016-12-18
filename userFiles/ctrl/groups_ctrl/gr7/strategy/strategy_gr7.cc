@@ -1,3 +1,11 @@
+/* Mobile Robots Project - stategy_gr7.cc
+ * Determines wich target to choose
+ * Version 1.3
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
+
 #include "strategy_gr7.h"
 #include "path_planning_gr7.h"
 #include "speed_regulation_gr7.h"
