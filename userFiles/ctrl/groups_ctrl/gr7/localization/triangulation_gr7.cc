@@ -1,3 +1,10 @@
+/* Mobile Robots Project - opp_pos_gr7.cc
+ * Measure Robot Position Using the beacon tower
+ * Version 2.1
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
 #include "triangulation_gr7.h"
 #include "useful_gr7.h"
 #include "init_pos_gr7.h"
