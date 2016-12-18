@@ -1,8 +1,9 @@
-/*! 
- * \author Group 7
- * \file init_pos_gr7.h
- * \brief opponents position
- */
+/* Mobile Robots Project - opp_pos_gr7.h
+ * Estimate Opponnents Robot Position Using the beacon tower
+ * Version 1.7
+ * Last Update: 8/11/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #ifndef _OPP_POS_GR7_H_
 #define _OPP_POS_GR7_H_ 

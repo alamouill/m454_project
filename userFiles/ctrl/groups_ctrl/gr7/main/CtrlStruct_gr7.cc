@@ -1,3 +1,9 @@
+/*! 
+ * \author Group 7
+ * \file CtrlStruct_gr7.cc
+ * \brief initialize the control structure of the robot
+ */
+
 #include "CtrlStruct_gr7.h"
 #include "namespace_ctrl.h"
 #include "init_pos_gr7.h"
@@ -11,20 +17,20 @@
 NAMESPACE_INIT(ctrlGr7);
 
 /*! \brief initialize the controller structure
- * 
- * \param[in] inputs inputs of the controller
- * \param[in] outputs outputs of the controller
- * \return controller main structure
- */
+*
+* \param[in] inputs inputs of the controller
+* \param[in] outputs outputs of the controller
+* \return controller main structure
+*/
 CtrlStruct* init_CtrlStruct(CtrlIn *inputs, CtrlOut *outputs)
 {
 	int i;
 	CtrlStruct *cvs;
 
-	cvs = (CtrlStruct*) malloc(sizeof(CtrlStruct));
+	cvs = (CtrlStruct*)malloc(sizeof(CtrlStruct));
 
 	// io
-	cvs->inputs  = inputs;
+	cvs->inputs = inputs;
 	cvs->outputs = outputs;
 
 	// main state
@@ -32,30 +38,30 @@ CtrlStruct* init_CtrlStruct(CtrlIn *inputs, CtrlOut *outputs)
 
 	// IDs (will be erased in the initialization)
 	cvs->robot_id = ROBOT_B;
-	cvs->team_id  = TEAM_A;
+	cvs->team_id = TEAM_A;
 
 	// robot position
-	cvs->rob_pos = (RobotPosition*) malloc(sizeof(RobotPosition));
+	cvs->rob_pos = (RobotPosition*)malloc(sizeof(RobotPosition));
 
 	cvs->rob_pos->x = 0.0;
 	cvs->rob_pos->y = 0.0;
 
-	cvs->rob_pos->theta  = 0.0;
+	cvs->rob_pos->theta = 0.0;
 	cvs->rob_pos->last_t = 0.0;
 
 	// triangulation position
-	cvs->triang_pos = (RobotPosition*) malloc(sizeof(RobotPosition));
+	cvs->triang_pos = (RobotPosition*)malloc(sizeof(RobotPosition));
 
 	cvs->triang_pos->x = 0.0;
 	cvs->triang_pos->y = 0.0;
 
-	cvs->triang_pos->theta  = 0.0;
+	cvs->triang_pos->theta = 0.0;
 	cvs->triang_pos->last_t = 0.0;
 
 	// opponents position
-	cvs->opp_pos = (OpponentsPosition*) malloc(sizeof(OpponentsPosition));
+	cvs->opp_pos = (OpponentsPosition*)malloc(sizeof(OpponentsPosition));
 
-	for(i=0; i<2; i++)
+	for (i = 0; i<2; i++)
 	{
 		cvs->opp_pos->x[i] = 0.0;
 		cvs->opp_pos->y[i] = 0.0;
@@ -65,7 +71,7 @@ CtrlStruct* init_CtrlStruct(CtrlIn *inputs, CtrlOut *outputs)
 	cvs->opp_pos->nb_opp = inputs->nb_opponents;
 
 	// speed regulation
-	cvs->sp_reg = (SpeedRegulation*) malloc(sizeof(SpeedRegulation));
+	cvs->sp_reg = (SpeedRegulation*)malloc(sizeof(SpeedRegulation));
 
 	cvs->sp_reg->int_error_r = 0.0;
 	cvs->sp_reg->int_error_l = 0.0;
@@ -73,7 +79,7 @@ CtrlStruct* init_CtrlStruct(CtrlIn *inputs, CtrlOut *outputs)
 	cvs->sp_reg->last_t = 0.0;
 
 	// calibration
-	cvs->calib = (RobotCalibration*) malloc(sizeof(RobotCalibration));
+	cvs->calib = (RobotCalibration*)malloc(sizeof(RobotCalibration));
 
 	cvs->calib->flag = 0;
 	cvs->calib->t_flag = 0.0;
@@ -88,9 +94,9 @@ CtrlStruct* init_CtrlStruct(CtrlIn *inputs, CtrlOut *outputs)
 }
 
 /*! \brief release controller main structure memory
- * 
- * \param[in] cvs controller main structure
- */
+*
+* \param[in] cvs controller main structure
+*/
 void free_CtrlStruct(CtrlStruct *cvs)
 {
 	free_path_planning(cvs->path);

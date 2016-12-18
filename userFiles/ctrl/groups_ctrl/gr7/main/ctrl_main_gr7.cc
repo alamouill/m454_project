@@ -37,11 +37,6 @@ void controller_init(CtrlStruct *cvs)
 	// robot ID
 	cvs->robot_id = inputs->robot_id;
 
-	std::pair<int, int> abc;
-
-	std::vector<int> test;
-
-
 	// robot team
 	switch (inputs->robot_id)
 	{
@@ -102,7 +97,7 @@ void controller_loop(CtrlStruct *cvs)
 	}
 
 	// tower control
-	outputs->tower_command = 35;
+	outputs->tower_command = 50;
 	if (0) {
 		if (t > -10 && t < -7) {
 			speed_regulation(cvs, +20.0, +20.0);
@@ -123,7 +118,7 @@ void controller_loop(CtrlStruct *cvs)
 			calibration(cvs);
 			break;
 
-		// wait before match beginning
+		// wait before match begins
 		case WAIT_INIT_STATE:
 			update_odometry(cvs);
 			speed_regulation(cvs, 0.0, 0.0);
