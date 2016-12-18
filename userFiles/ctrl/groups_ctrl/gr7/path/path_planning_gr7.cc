@@ -15,12 +15,12 @@ NAMESPACE_INIT(ctrlGr7);
 #define K_GOAL     6.5   /// 6.5
 #define M_TO_MM    1000
 #define DSTARGOAL  130
-#define D_OPP    0.45
+#define D_OPP    0.75
 #define NO_GOAL    3666
 
 //! defines the Team the robot is on.
 enum class TEAM : int { BLUE, YELLOW };
-TEAM myTeam = TEAM::BLUE;
+TEAM myTeam;
 
 static double force_map[63][43][2] = {
 	{ { { 10.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 2.78225 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.14750 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.25160 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.27073 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -1.48500 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -5.38641 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 5.37724 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.23340 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.87677 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -2.77308 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } } },
@@ -121,10 +121,12 @@ void initializeNodes()
 	int k;
 	if (myTeam == TEAM::BLUE)
 	{
+		std::cout << "TEAM BLUE ---------------------------------------------------------------------\n";
 		k = 1;
 	}
 	else
 	{
+		std::cout << "TEAM white ************************************************************************\n";
 		k = -1;
 	}
 	//! intiialize the pucks
@@ -470,8 +472,16 @@ void dijkstra(int graph[NUMNODE][NUMNODE], int src)
 /*! \brief initializes and computes the dijkstra's shortest path algorithm.
 * Stores all connections within the graph in m_paths.
 */
-void init_djikstra()
+void init_djikstra(CtrlStruct*cvs)
 {
+	// ----- init djikstra ------------------------ //
+	int team_id = cvs->team_id;
+	if (team_id == TEAM_A) {
+		myTeam = TEAM::BLUE;
+	}
+	else {
+		myTeam = TEAM::YELLOW;
+	}
 	int graph[NUMNODE][NUMNODE] = { 0 };
 
 	//! Initialize Nodes and Edges of the Graph
@@ -509,14 +519,7 @@ PathPlanning* init_path_planning(CtrlStruct *cvs)
 	path->theta = M_PI / 2;
 	// ----- path-planning initialization end ----- //
 
-	// ----- init djikstra ------------------------ //
-	if (cvs->team_id == TEAM_B) {
-		myTeam = TEAM::BLUE;
-	}
-	else {
-		myTeam = TEAM::YELLOW;
-	}
-	init_djikstra();
+
 
 	// return structure initialized
 	return path;
@@ -603,7 +606,7 @@ void path_planning(CtrlStruct *cvs)
 	OpponentsPosition *opp_pos = cvs->opp_pos;
 	// Variables
 	static double last_speed_x = 0, last_speed_y = 0;
-	double force2Goal_x, force2Goal_y, dist2Opp_x, dist2Opp_y, dist2Opp_norm, force2Opp_x = 0, force2Opp_y = 0;
+	double force2Goal_x, force2Goal_y, dist2Opp_x, dist2Opp_y, dist2Opp_norm, force2Opp_x = 0, force2Opp_y = 0, force2Opp_x2 = 0, force2Opp_y2 = 0;
 
 	// Find the indices of the force_map corresponding to the actual position
 	int indice_x = (rob_pos->y * M_TO_MM + 1500) * 63 / 3000;
@@ -612,6 +615,10 @@ void path_planning(CtrlStruct *cvs)
 	// Compute the forces from the goal and the opponent
 	force2Goal(&force2Goal_x, &force2Goal_y, path->nextGoal[0], path->nextGoal[1], rob_pos->x*M_TO_MM, rob_pos->y*M_TO_MM);
 	force2Opp(&force2Opp_x, &force2Opp_y, rob_pos->x, rob_pos->y, opp_pos->x[0], opp_pos->y[0]);
+
+	// in case of second opponent
+	if (cvs->inputs->nb_opponents > 1)
+		force2Opp(&force2Opp_x2, &force2Opp_y2, rob_pos->x, rob_pos->y, opp_pos->x[1], opp_pos->y[1]);
 
 	// If there is no goal
 	if ((force2Goal_x == 0) && (force2Goal_y == 0))
@@ -624,18 +631,17 @@ void path_planning(CtrlStruct *cvs)
 	}
 
 	// Compute the speed in X and Y
-	//printf("%f \n", norm_dist(path->nextGoal[0] - rob_pos->x*M_TO_MM, path->nextGoal[1] - rob_pos->y*M_TO_MM));
-	//	printf("%d \n", cvs->inputs->target_detected);
+
 	if (norm_dist(path->nextGoal[0] - rob_pos->x*M_TO_MM, path->nextGoal[1] - rob_pos->y*M_TO_MM) > DSTARGOAL)
 	{
-		path->speed[0] = K_FROTT*last_speed_x + KPOT*(force_map[indice_x][indice_y][0]) + force2Goal_x - force2Opp_x;
-		path->speed[1] = K_FROTT*last_speed_y + KPOT*(force_map[indice_x][indice_y][1]) + force2Goal_y - force2Opp_y;
+		path->speed[0] = K_FROTT*last_speed_x + KPOT*(force_map[indice_x][indice_y][0]) + force2Goal_x - force2Opp_x - force2Opp_x2;
+		path->speed[1] = K_FROTT*last_speed_y + KPOT*(force_map[indice_x][indice_y][1]) + force2Goal_y - force2Opp_y - force2Opp_y2;
 	}
 	else
 	{
 		//printf("coucou\n");
-		path->speed[0] = K_FROTT*last_speed_x + force2Goal_x - force2Opp_x;
-		path->speed[1] = K_FROTT*last_speed_y + force2Goal_y - force2Opp_y;
+		path->speed[0] = K_FROTT*last_speed_x + force2Goal_x - force2Opp_x - force2Opp_x2;
+		path->speed[1] = K_FROTT*last_speed_y + force2Goal_y - force2Opp_y - force2Opp_y2;
 	}
 	// Convert the speed X,Y -> Pho, Theta
 	path->linspeed = K_VITESSE*sqrt(path->speed[0] * path->speed[0] + path->speed[1] * path->speed[1]);

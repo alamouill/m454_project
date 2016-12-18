@@ -48,7 +48,6 @@ void calibration(CtrlStruct *cvs)
 	{
 		k = -1;
 	}
-
 	/*switch (calib->flag)
 	{
 	case CALIB_START: // start calibration
