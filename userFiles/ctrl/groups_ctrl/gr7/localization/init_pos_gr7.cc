@@ -1,3 +1,11 @@
+/* Mobile Robots Project - init_pos_gr7.cc
+ * Adapt initial positions, depending on the game map.
+ * Version 1.0
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
+
 #include "init_pos_gr7.h"
 #include <math.h>
 
