@@ -26,6 +26,7 @@ NAMESPACE_INIT(ctrlGr7);
 enum class TEAM : int { BLUE, YELLOW };
 TEAM myTeam;
 
+// store the repulsive forces due to the arena on the robot
 static double force_map[63][43][2] = {
 	{ { { 10.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 2.78225 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.14750 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.25160 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.27073 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -1.48500 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -5.38641 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 5.37724 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.23340 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.87677 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -2.77308 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } } },
 	{ { { 10.00000 },{ -0.00000 } },{ { 10.00000 },{ 10.00000 } },{ { 10.00000 },{ 10.00000 } },{ { 5.79857 },{ 10.00000 } },{ { 2.30869 },{ 10.00000 } },{ { 1.00309 },{ 10.00000 } },{ { 0.41461 },{ 10.00000 } },{ { 0.12846 },{ 10.00000 } },{ { 0.01857 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.01857 },{ 10.00000 } },{ { -0.12846 },{ 10.00000 } },{ { -0.43079 },{ 10.00000 } },{ { -1.09623 },{ 10.00000 } },{ { -2.61214 },{ 10.00000 } },{ { -6.62745 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } },{ { -0.00000 },{ -0.00000 } },{ { 10.00000 },{ 10.00000 } },{ { 10.00000 },{ 10.00000 } },{ { 6.49899 },{ 10.00000 } },{ { 2.19753 },{ 10.00000 } },{ { 0.09314 },{ 10.00000 } },{ { -1.87790 },{ 10.00000 } },{ { -5.67011 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } },{ { -10.00000 },{ -0.00000 } } },
@@ -380,7 +381,6 @@ int minDistance(int dist[], bool sptSet[])
 *  param[in] index of the considered node
 *  param[in] path vector to store the list of intermediate nodes
 */
-
 void storePathForNodej(int parent[], int j, std::vector<int> *path)
 {
 	//! Base Case : If j is the source node
@@ -689,42 +689,51 @@ void update_path_planning(CtrlStruct *cvs)
 // Set a new goal
 void set_goal(PathPlanning *path, std::pair<int, int> pos, std::pair<int, int> goal)
 {
-	std::cout << "goal:" << goal.first << " " << goal.second << "\n";
-	std::cout << "pos:" << pos.first << " " << pos.second << "\n";
-
-	//! print all the paths
-
-	if (goal.first < 3665) {
-
+	//std::cout << "goal:" << goal.first << " " << goal.second << "\n";
+	//std::cout << "pos:" << pos.first << " " << pos.second << "\n";
+	
+	
+	if (goal.first < NO_GOAL) {
+		//identify the indices of the closest node to the start and the goal
 		path->startID = identifyClosestNode(pos);
 		path->goalID = identifyClosestNode(goal);
 
+		//! if the IDs are correct and the startID is different than the goalID
 		if ((path->startID  <NUMNODE && path->goalID <NUMNODE)
 			&& path->startID != path->goalID)
 		{
+			//! get the next node's coordinates from the node list		
 			std::pair<int, int> nextNode = nodes.at(m_paths[path->startID][path->goalID].at(0))->pos;
+			//! reinitialize the position on the identified path
 			path->positionOnPath = 0;
-			std::cout << "_pp next goal set as: " << nextNode.first << nextNode.second << "\n";
-			path->nextGoal[0] = nextNode.first;
+			//std::cout << "_pp next goal set as: " << nextNode.first << nextNode.second << "\n";
+			//! set the next goal's	coordinates
+ 			path->nextGoal[0] = nextNode.first;
 			path->nextGoal[1] = nextNode.second;
 		}
 		else {
+			//! set the next goal's	coordinates to the original goal
 			std::cout << "setting goal as intermediate goal! 1 \n";
 			path->nextGoal[0] = goal.first;
 			path->nextGoal[1] = goal.second;
 		}
 	}
 	else {
+		//! set the next goal's	coordinates to the original goal
 		std::cout << "setting goal as intermediate goal! 2\n";
 		path->nextGoal[0] = goal.first;
 		path->nextGoal[1] = goal.second;
 	}
 	//	printf( "_pp getpath pre\n");
 
-
 	return;
 }
 
+/*! \brief get the node position given it's ID
+*
+* \param[in,out] node ID
+* \return the position of the node in [mm]
+*/
 std::pair<int, int> get_node_pos(int node_nb) {
 	return nodes.at(node_nb)->pos;
 }
