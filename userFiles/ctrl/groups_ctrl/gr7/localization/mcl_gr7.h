@@ -1,8 +1,8 @@
-/*! 
- * \author Group 7
- * \file mcl_gr7.h
- * \brief localization using Monte Carlo technic
- */
+/* Mobile Robots Project - mcl_gr7.h
+ * Version 0
+ * Last Update: 18/10/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #ifndef _MCL_GR7_H_
 #define _MCL_GR7_H_
