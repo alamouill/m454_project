@@ -250,8 +250,8 @@ void triangulation(CtrlStruct *cvs)
 		invD = 1.0 / D;
 		K = k * invD;
 
-		pos_tri->x = first_order_filter(pos_tri->x, K * (c23y - c31y) + x_beac_3 - 0.083 * cos(rob_pos->theta), 0.2, inputs->t - last_t);
-		pos_tri->y = first_order_filter(pos_tri->y, K * (c31x - c23x) + y_beac_3 - 0.083 * sin(rob_pos->theta), 0.2, inputs->t - last_t);
+		pos_tri->x = first_order_filter(pos_tri->x, K * (c23y - c31y) + x_beac_3 - 0.083 * cos(rob_pos->theta), 0.1, inputs->t - last_t);
+		pos_tri->y = first_order_filter(pos_tri->y, K * (c31x - c23x) + y_beac_3 - 0.083 * sin(rob_pos->theta), 0.1, inputs->t - last_t);
 		pos_tri->theta = atan2(pos_tri->y - y_beac_1, pos_tri->x - x_beac_1) - alpha_1 - M_PI;
 		pos_tri->theta = limit_angle(pos_tri->theta);
 
@@ -279,8 +279,8 @@ void triangulation(CtrlStruct *cvs)
 		invD = 1.0 / D;
 		K = k * invD;
 
-		pos_tri->x = first_order_filter(pos_tri->x, K * (c31y - c12y) + x_beac_1 - 0.083 * cos(rob_pos->theta), 0.2, inputs->t - last_t);
-		pos_tri->y = first_order_filter(pos_tri->y, K * (c12x - c31x) + y_beac_1 - 0.083 * sin(rob_pos->theta), 0.2, inputs->t - last_t);
+		pos_tri->x = first_order_filter(pos_tri->x, K * (c31y - c12y) + x_beac_1 - 0.083 * cos(rob_pos->theta), 0.1, inputs->t - last_t);
+		pos_tri->y = first_order_filter(pos_tri->y, K * (c12x - c31x) + y_beac_1 - 0.083 * sin(rob_pos->theta), 0.1, inputs->t - last_t);
 		pos_tri->theta = atan2(pos_tri->y - y_beac_1, pos_tri->x - x_beac_1) - alpha_1 - M_PI;
 		pos_tri->theta = limit_angle(pos_tri->theta);
 
@@ -308,8 +308,8 @@ void triangulation(CtrlStruct *cvs)
 		invD = 1.0 / D;
 		K = k * invD;
 
-		pos_tri->x = first_order_filter(pos_tri->x, K * (c12y - c23y) + x_beac_2 - 0.083 * cos(rob_pos->theta), 0.2, inputs->t - last_t);
-		pos_tri->y = first_order_filter(pos_tri->y, K * (c23x - c12x) + y_beac_2 - 0.083 * sin(rob_pos->theta), 0.2, inputs->t - last_t);
+		pos_tri->x = first_order_filter(pos_tri->x, K * (c12y - c23y) + x_beac_2 - 0.083 * cos(rob_pos->theta), 0.1, inputs->t - last_t);
+		pos_tri->y = first_order_filter(pos_tri->y, K * (c23x - c12x) + y_beac_2 - 0.083 * sin(rob_pos->theta), 0.1, inputs->t - last_t);
 		pos_tri->theta = atan2(pos_tri->y - y_beac_1, pos_tri->x - x_beac_1) - alpha_1 - M_PI;
 		pos_tri->theta = limit_angle(pos_tri->theta);
 
@@ -335,8 +335,8 @@ void triangulation(CtrlStruct *cvs)
 	D = (c12x - c23x) * (c23y - c31y) - (c23x - c31x) * (c12y - c23y);
 	invD = 1.0 / D;
 	K = k * invD;
-	pos_tri->x = first_order_filter(pos_tri->x, K * (c12y - c23y) + x_beac_2 - 0.083 * cos(rob_pos->theta), 0.2, inputs->t - last_t);
-	pos_tri->y = first_order_filter(pos_tri->y, K * (c23x - c12x) + y_beac_2 - 0.083 * sin(rob_pos->theta), 0.2, inputs->t - last_t);
+	pos_tri->x = first_order_filter(pos_tri->x, K * (c12y - c23y) + x_beac_2 - 0.083 * cos(rob_pos->theta), 0.1, inputs->t - last_t);
+	pos_tri->y = first_order_filter(pos_tri->y, K * (c23x - c12x) + y_beac_2 - 0.083 * sin(rob_pos->theta), 0.1, inputs->t - last_t);
 	pos_tri->theta = atan2(pos_tri->y - y_beac_1, pos_tri->x - x_beac_1) - alpha_1 - M_PI;
 	pos_tri->theta = limit_angle(pos_tri->theta);
 	last_t = inputs->t;

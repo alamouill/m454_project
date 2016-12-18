@@ -102,7 +102,7 @@ void controller_loop(CtrlStruct *cvs)
 	}
 
 	// tower control
-	outputs->tower_command = 35;
+	outputs->tower_command = 50;
 	if (0) {
 		if (t > -10 && t < -7) {
 			speed_regulation(cvs, +20.0, +20.0);

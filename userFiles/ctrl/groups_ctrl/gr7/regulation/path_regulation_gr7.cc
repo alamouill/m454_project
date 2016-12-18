@@ -4,10 +4,10 @@
 
 NAMESPACE_INIT(ctrlGr7);
 
-#define KP_NORM 0.1		//0.2
+#define KP_NORM 0.15		//0.2
 #define KI_NORM 0.01	//0.01
 #define KP_THETA 30		//20
-#define KI_THETA 0.20	// 0.2
+#define KI_THETA 0.1	// 0.2
 
 // This function determine the way the robot will move (turn + backward / forward)
 static void determine_dynamic(double* linspeed_path, double* err_theta)

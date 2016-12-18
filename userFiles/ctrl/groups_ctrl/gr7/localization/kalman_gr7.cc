@@ -6,9 +6,9 @@
 
 #define R_ROUE 0.03
 #define ECART_ROUE 0.225
-#define QDIAG 0.17
-#define QTHETA 0.001
-#define RCOEFF 0.3
+#define QDIAG 0.11
+#define QTHETA 0.016
+#define RCOEFF 1.518
 
 NAMESPACE_INIT(ctrlGr7);
 
@@ -188,12 +188,12 @@ void kalman(double new_position[3], double odometry_position[3], double tria_pos
 	substract_matrices(new_P, KHP, future_P);
 
 	/*************************************** Update new position *********************************/
-    new_position[0]= first_order_filter(prev_position[0], future_position[0], 0.1, dt);
-	new_position[1]= first_order_filter(prev_position[1], future_position[1], 0.1, dt);
-	new_position[2]= first_order_filter(prev_position[2], future_position[2], 0.1, dt);
-	//new_position[0] = future_position[0];
-	//new_position[1] = future_position[1];
-	//new_position[2] = future_position[2];
+ //   new_position[0]= first_order_filter(prev_position[0], future_position[0], 0.1, dt);
+	//new_position[1]= first_order_filter(prev_position[1], future_position[1], 0.1, dt);
+	//new_position[2]= first_order_filter(prev_position[2], future_position[2], 0.1, dt);
+	new_position[0] = future_position[0];
+	new_position[1] = future_position[1];
+	new_position[2] = future_position[2];
 
 
 
@@ -244,10 +244,10 @@ void kalman(CtrlStruct *cvs)
 	
 	kalman(position_post_kalman, odo_pos,tria_pos, command, dt);
 
-//	rob_pos->x = position_post_kalman[0];
-//	rob_pos->y = position_post_kalman[1];
-//	rob_pos->theta = position_post_kalman[2];
-//	printf("%f \n", position_post_kalman[0]);
+	/*rob_pos->x = position_post_kalman[0];
+	rob_pos->y = position_post_kalman[1];
+	rob_pos->theta = position_post_kalman[2];*/
+	printf("%f \n", position_post_kalman[0]);
 	set_plot(position_post_kalman[0], "our X[m]");
 //	set_plot(position_post_kalman[1], "our Y[m]");
 //	set_plot(position_post_kalman[2], "our Th[m]");
