@@ -20,7 +20,7 @@ NAMESPACE_INIT(ctrlGr7);
 
 //! defines the Team the robot is on.
 enum class TEAM : int { BLUE, YELLOW };
-TEAM myTeam;
+TEAM myTeam = TEAM::BLUE;
 
 static double force_map[63][43][2] = {
 	{ { { 10.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 2.78225 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.14750 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.25160 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.27073 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -1.48500 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -5.38641 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 5.37724 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.23340 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.87677 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -2.77308 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } } },
@@ -113,9 +113,6 @@ std::vector<NODE*> nodes;
 //! throught the vector of nodes by giving the ID.
 std::vector<int> m_paths[NUMNODE][NUMNODE];
 
-
-
-
 /*! \brief intiializes the nodes in the graph given a TEAM. This will determine
 * the coordinates of all the intermediate nodes as well as the pucks.
 */
@@ -136,7 +133,7 @@ void initializeNodes()
 	//! level 2 pucks
 	nodes.push_back(new NODE(250, k * 1250));
 	nodes.push_back(new NODE(100, k * 0));
-	nodes.push_back(new NODE(250, k*-1250));
+	nodes.push_back(new NODE(250, -k*1250));
 	//! level 1 pucks
 	nodes.push_back(new NODE(700, -k * 600));
 	nodes.push_back(new NODE(-400, -k * 600));
@@ -465,7 +462,7 @@ void dijkstra(int graph[NUMNODE][NUMNODE], int src)
 			}
 	}
 
-	//! print the constructed distance array
+	//! store the constructed distance array
 	storeAllPathsFromSourceNode(dist, parent, src);
 }
 
@@ -497,7 +494,7 @@ void init_djikstra()
  * 
  * \param[in,out] path path-planning main structure
  */
-PathPlanning* init_path_planning()
+PathPlanning* init_path_planning(CtrlStruct *cvs)
 {
 	PathPlanning *path;
 
@@ -513,6 +510,12 @@ PathPlanning* init_path_planning()
 	// ----- path-planning initialization end ----- //
 
 	// ----- init djikstra ------------------------ //
+	if (cvs->team_id == TEAM_B) {
+		myTeam = TEAM::BLUE;
+	}
+	else {
+		myTeam = TEAM::YELLOW;
+	}
 	init_djikstra();
 
 	// return structure initialized
@@ -651,12 +654,6 @@ void path_planning(CtrlStruct *cvs)
 */
 void update_path_planning(CtrlStruct *cvs)
 {
-	if (cvs->team_id == 0) {
-		myTeam = TEAM::BLUE;
-	}
-	else {
-		myTeam = TEAM::YELLOW;
-	}
 	double rob_pos[] = { cvs->rob_pos->x*1000, cvs->rob_pos->y*1000 };
 //	std::cout << ("update_path_planning\t") << cvs->path->nextGoal[0] << "\t rob pos" <<rob_pos[0] << "\n";
 	// Definitions
