@@ -1,3 +1,9 @@
+/*! 
+ * \author Group 7
+ * \file CtrlStruct_gr7.cc
+ * \brief initialize the control structure of the robot
+ */
+
 #include "CtrlStruct_gr7.h"
 #include "namespace_ctrl.h"
 #include "init_pos_gr7.h"
