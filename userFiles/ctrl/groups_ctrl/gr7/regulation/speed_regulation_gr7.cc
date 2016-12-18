@@ -1,3 +1,9 @@
+/*! 
+ * \author Group 7
+ * \file speed_regulation_gr7.cc
+ * \brief speed regulation
+ */
+
 #include "speed_regulation_gr7.h"
 #include "useful_gr7.h"
 
@@ -51,18 +57,10 @@ void speed_regulation(CtrlStruct *cvs, double r_sp_ref, double l_sp_ref)
 	var_r = kp*(r_sp_ref - r_sp) + ki*int_valr;
 	var_l = kp*(l_sp_ref - l_sp) + ki*int_vall;	
 
-	//var_r = first_order_filter(r_sp, var_r, 0.0005, dt);
-	//var_l = first_order_filter(l_sp, var_l, 0.0005, dt);
-
 	// wheel commands
 	
 	outputs->wheel_commands[R_ID] = var_r;
 	outputs->wheel_commands[L_ID] = var_l;
-
-	/*set_plot(r_sp_ref, "Ref R speed");
-	set_plot(l_sp_ref, "Ref L speed");
-	set_plot(r_sp, "R speed");
-	set_plot(l_sp, "L speed");*/
 
 	// ----- Wheels regulation computation end ----- //
 
