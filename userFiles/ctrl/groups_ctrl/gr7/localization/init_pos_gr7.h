@@ -1,8 +1,9 @@
-/*! 
- * \author Group 7
- * \file init_pos_gr7.h
- * \brief initial position of the robot
- */
+/* Mobile Robots Project - init_pos_gr7.cc
+ * Adapt initial positions, depending on the game map.
+ * Version 1.0
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #ifndef _INIT_POS_GR7_H_
 #define _INIT_POS_GR7_H_ 
