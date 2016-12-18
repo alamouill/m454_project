@@ -1,3 +1,11 @@
+/* Mobile Robots Project - path_regulation_gr7.cc
+ * regulation to follow a given path
+ * Version 2.1
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
+
+
 #include "path_regulation_gr7.h"
 #include "useful_gr7.h"
 #include "speed_regulation_gr7.h"
