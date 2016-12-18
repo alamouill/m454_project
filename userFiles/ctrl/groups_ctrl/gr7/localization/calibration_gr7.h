@@ -1,8 +1,10 @@
-/*! 
- * \author Group 7
- * \file calibration_gr7.h
- * \brief calibration of the robot's position x, y, theta
- */
+
+/* Mobile Robots Project - calibration_gr7.h
+ * Calibrate the position of the Robot
+ * Version 1.2
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #ifndef _CALIBRATION_GR7_H_
 #define _CALIBRATION_GR7_H_ 
