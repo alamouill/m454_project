@@ -1,8 +1,9 @@
-/*! 
- * \author Group 7
- * \file triangulation_gr7.h
- * \brief triangulation to get the robot abgrXute position
- */
+/* Mobile Robots Project - triangulation_gr7.h
+ * Measure Robot Position Using the beacon tower
+ * Version 2.1
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #ifndef _TRIANGULATION_GR7_H_
 #define _TRIANGULATION_GR7_H_ 
