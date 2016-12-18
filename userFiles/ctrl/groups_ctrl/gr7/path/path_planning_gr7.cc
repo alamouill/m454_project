@@ -1,4 +1,8 @@
-
+/*! 
+ * \author Group 7
+ * \file path_planning_gr7.cc
+ * \brief path planning for the robot using potential field + roadmap with dijkstra
+ */
 
 #include "path_planning_gr7.h"
 #include "init_pos_gr7.h"
