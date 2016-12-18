@@ -39,17 +39,16 @@ void calibration(CtrlStruct *cvs)
 	team_id = cvs->team_id;
 	// finite state machine (FSM)
 	// team blue
-	
+	int k;
 	if(team_id == 0)
 	{
 		k = 1;
-	}
-	else 
+	}else 
 	{
 		k = -1;
 	}
 	
-	switch (calib->flag)
+	/*switch (calib->flag)
 		{
 			case CALIB_START: // start calibration
 				speed_regulation(cvs, -10.0, -10.0);
@@ -69,7 +68,7 @@ void calibration(CtrlStruct *cvs)
 				speed_regulation(cvs, 10.0, 10.0);
 
 				// go to state B as soon as distance of 300mm from wall is achieved
-				if (cvs->rob_pos->y <= 1.2)
+				if (abs(cvs->rob_pos->y) <= 1.2)
 				{
 					calib->flag = CALIB_STATE_B;
 					calib->t_flag = t;
@@ -130,9 +129,9 @@ void calibration(CtrlStruct *cvs)
 				printf("Error: unknown state : %d !\n", calib->flag);
 				exit(EXIT_FAILURE);
 		}
-	}
-
-	/*
+	
+	*/
+	
 	if(team_id == 0)
 	{
 		switch (calib->flag)
@@ -304,7 +303,7 @@ void calibration(CtrlStruct *cvs)
 			exit(EXIT_FAILURE);
 		}
 	}
-	*/
+
 }
 
 NAMESPACE_CLOSE();

@@ -18,6 +18,10 @@ NAMESPACE_INIT(ctrlGr7);
 #define D_OPP    0.45
 #define NO_GOAL    3666
 
+//! defines the Team the robot is on.
+enum class TEAM : int { BLUE, YELLOW };
+TEAM myTeam;
+
 static double force_map[63][43][2] = {
 	{ { { 10.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 2.78225 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.14750 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.25160 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00917 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.27073 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -1.48500 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -5.38641 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 5.37724 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { 1.23340 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.87677 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -2.77308 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } } },
 	{ { { 10.00000 },{ -0.00000 } },{ { 10.00000 },{ 10.00000 } },{ { 10.00000 },{ 10.00000 } },{ { 5.79857 },{ 10.00000 } },{ { 2.30869 },{ 10.00000 } },{ { 1.00309 },{ 10.00000 } },{ { 0.41461 },{ 10.00000 } },{ { 0.12846 },{ 10.00000 } },{ { 0.01857 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.00000 },{ 10.00000 } },{ { -0.01857 },{ 10.00000 } },{ { -0.12846 },{ 10.00000 } },{ { -0.43079 },{ 10.00000 } },{ { -1.09623 },{ 10.00000 } },{ { -2.61214 },{ 10.00000 } },{ { -6.62745 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } },{ { -0.00000 },{ -0.00000 } },{ { 10.00000 },{ 10.00000 } },{ { 10.00000 },{ 10.00000 } },{ { 6.49899 },{ 10.00000 } },{ { 2.19753 },{ 10.00000 } },{ { 0.09314 },{ 10.00000 } },{ { -1.87790 },{ 10.00000 } },{ { -5.67011 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } },{ { -10.00000 },{ 10.00000 } },{ { -10.00000 },{ -0.00000 } } },
@@ -109,9 +113,7 @@ std::vector<NODE*> nodes;
 //! throught the vector of nodes by giving the ID.
 std::vector<int> m_paths[NUMNODE][NUMNODE];
 
-//! defines the Team the robot is on.
-enum class Team : int { BLUE, YELLOW };
-Team myTeam = Team::BLUE;
+
 
 
 /*! \brief intiializes the nodes in the graph given a TEAM. This will determine
@@ -120,7 +122,7 @@ Team myTeam = Team::BLUE;
 void initializeNodes()
 {
 	int k;
-	if (myTeam == Team::BLUE)
+	if (myTeam == TEAM::BLUE)
 	{
 		k = 1;
 	}
@@ -635,7 +637,7 @@ void path_planning(CtrlStruct *cvs)
 	// Convert the speed X,Y -> Pho, Theta
 	path->linspeed = K_VITESSE*sqrt(path->speed[0] * path->speed[0] + path->speed[1] * path->speed[1]);
 	path->theta = atan2(path->speed[1], path->speed[0]);
-	printf("force bitch %f \t %f \t %f \t %f\n", path->speed[0], path->speed[1], path->linspeed, path->theta);
+//	printf("force bitch %f \t %f \t %f \t %f\n", path->speed[0], path->speed[1], path->linspeed, path->theta);
 	// Save the current speed
 	last_speed_x = path->speed[0];
 	last_speed_y = path->speed[1];
@@ -649,6 +651,12 @@ void path_planning(CtrlStruct *cvs)
 */
 void update_path_planning(CtrlStruct *cvs)
 {
+	if (cvs->team_id == 0) {
+		myTeam = TEAM::BLUE;
+	}
+	else {
+		myTeam = TEAM::YELLOW;
+	}
 	double rob_pos[] = { cvs->rob_pos->x*1000, cvs->rob_pos->y*1000 };
 //	std::cout << ("update_path_planning\t") << cvs->path->nextGoal[0] << "\t rob pos" <<rob_pos[0] << "\n";
 	// Definitions
@@ -664,7 +672,7 @@ void update_path_planning(CtrlStruct *cvs)
 			printf("go to next node2\n");
 			cvs->path->nextGoal[0] = nextNode.first;
 			cvs->path->nextGoal[1] = nextNode.second;
-			std::cout << ("go to next node finished: \t") << cvs->path->nextGoal[0] << "\t" << cvs->path->nextGoal[1] << "\n";
+			std::cout << ("NEXT INTERMEDIATE GOAL: \t") << cvs->path->nextGoal[0] << "\t" << cvs->path->nextGoal[1] << "\n";
 		}
 
 	}
@@ -689,7 +697,7 @@ void set_goal(PathPlanning *path, std::pair<int, int> pos, std::pair<int, int> g
 		{
 			std::pair<int, int> nextNode = nodes.at(m_paths[path->startID][path->goalID].at(0))->pos;
 			path->positionOnPath = 0;
-
+			std::cout << "_pp next goal set as: " << nextNode.first << nextNode.second << "\n";
 			path->nextGoal[0] = nextNode.first;
 			path->nextGoal[1] = nextNode.second;
 		}

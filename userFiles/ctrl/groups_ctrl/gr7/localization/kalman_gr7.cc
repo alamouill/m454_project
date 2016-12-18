@@ -247,7 +247,7 @@ void kalman(CtrlStruct *cvs)
 //	rob_pos->x = position_post_kalman[0];
 //	rob_pos->y = position_post_kalman[1];
 //	rob_pos->theta = position_post_kalman[2];
-	printf("%f \n", position_post_kalman[0]);
+//	printf("%f \n", position_post_kalman[0]);
 	set_plot(position_post_kalman[0], "our X[m]");
 //	set_plot(position_post_kalman[1], "our Y[m]");
 //	set_plot(position_post_kalman[2], "our Th[m]");

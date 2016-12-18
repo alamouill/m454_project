@@ -18,6 +18,5 @@ MBsysC_realtime.lib(plot_sdl.obj) : warning LNK4217: locally defined symbol expo
 MBsysC_realtime.lib(auto_plot.obj) : warning LNK4217: locally defined symbol get_char_tab imported in function init_auto_plot
 MBsysC_realtime.lib(auto_plot.obj) : warning LNK4217: locally defined symbol free_char_tab imported in function free_auto_plot
 Project_userfct.lib(user_dirdyn.obj) : warning LNK4217: locally defined symbol set_plot imported in function user_dirdyn_loop
-Project_userfct.lib(speed_regulation_gr7.obj) : warning LNK4049: locally defined symbol set_plot imported
 Project_userfct.lib(kalman_gr7.obj) : warning LNK4049: locally defined symbol set_plot imported
   exe_projectRobotran.vcxproj -> C:\Users\csbau\mobile_robots\m454_project\build\Release\exe_projectRobotran.exe

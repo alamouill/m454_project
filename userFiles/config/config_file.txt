@@ -37,10 +37,10 @@
 #
 #    GrXCtrl: The controller developed by the group. The 'X' must be replaced by the group number.
 #
-blue_ctrl   : Gr7Ctrl
+blue_ctrl   : KeyboardCtrl
 red_ctrl    : NoCtrl
 yellow_ctrl : NoCtrl
-white_ctrl  : KeyboardCtrl
+white_ctrl  : Gr7Ctrl
 
 
 # -- ROBOT INITIAL POSITIONS -- #

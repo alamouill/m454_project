@@ -59,10 +59,10 @@ void speed_regulation(CtrlStruct *cvs, double r_sp_ref, double l_sp_ref)
 	outputs->wheel_commands[R_ID] = var_r;
 	outputs->wheel_commands[L_ID] = var_l;
 
-	set_plot(r_sp_ref, "Ref R speed");
-	set_plot(l_sp_ref, "Ref L speed");
-	set_plot(r_sp, "R speed");
-	set_plot(l_sp, "L speed");
+//	set_plot(r_sp_ref, "Ref R speed");
+//	set_plot(l_sp_ref, "Ref L speed");
+//	set_plot(r_sp, "R speed");
+//	set_plot(l_sp, "L speed");
 
 	// ----- Wheels regulation computation end ----- //
 

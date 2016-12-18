@@ -271,9 +271,9 @@ void main_strategy(CtrlStruct *cvs)
 
 
 		set_goal(cvs->path, pos, ngoal);
-
+		std::cout << "_strat goal set: " << ngoal.first << " " << ngoal.second << "\n";
 		
-		std::cout << "new goal set: " << cvs->path->nextGoal[0] << " " << cvs->path->nextGoal[1] << "availability: " << cvs->strat->avilability[cvs->strat->index_goal] << "\n";
+		std::cout << "_strat next goal on path: " << cvs->path->nextGoal[0] << " " << cvs->path->nextGoal[1] << " availability endgoal: " << cvs->strat->avilability[cvs->strat->index_goal] << "\n";
 		break;
 
 	case GAME_STATE_DRIVE_HOME:
