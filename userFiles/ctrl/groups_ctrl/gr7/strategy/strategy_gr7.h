@@ -1,8 +1,9 @@
-/*!
-* \author Group 7
-* \file strategy_gr7.h
-* \brief strategy during the game
-*/
+/* Mobile Robots Project - strategy_gr7.h
+ * Determines wich Target to go to. 
+ * Version 1.3
+ * Last Update: 18/12/16
+ * Group 7: Baumann, El-Hamamsy, Laumouille, Triquet
+ * EPFL, MT*/ 
 
 #ifndef _STRATEGY_GR7_H_
 #define _STRATEGY_GR7_H_
